@@ -68,8 +68,38 @@ REGLAS = [
 ]
 _COMP = [(b, re.compile(p), f, why) for b, p, f, why in REGLAS]
 
+import json, os
+SEB_TIPO = [
+    ('Tefal', r'\b(bascula|balanza|ixeo|ingenio|actifry|optigrill|olla|sarten|cacerola|wok|cazo|freidora|yogurtera)\b'),
+    ('Rowenta', r'\b(afeitador|barbero|cortapelos?|depiladora|secador|moldeador|rizador|plancha (de )?pelo|cepillo (aire|secador)|aspirador|aspiradora|escoba|ventilador|calefactor|termoventilador|purificador|atructure)\b'),
+    ('Moulinex', r'\b(batidora|amasadora|picadora|licuadora|exprimidor|tostador|cafetera|hervidor|robot|horno|panificadora|yogurtera|cuchillo electrico|cookeo|easy fry)\b'),
+]
+_EAN = {}
+_p = os.path.join(os.path.dirname(__file__), 'marcas-ean.json')
+if os.path.exists(_p):
+    _EAN = json.load(open(_p, encoding='utf-8'))
+
 def marca(it):
+    """(marca, motivo). Primero el nombre, después el código de barras, después las líneas de producto y los colores."""
+    by_name = by_rule = None
     for b, rx, f, why in _COMP:
         if rx.search(it['k']) and (f is None or f(it)):
-            return b, why
+            if why == 'nombre': by_name = (b, why)
+            elif by_rule is None: by_rule = (b, why)
+            if by_name: break
+    if by_name:
+        return by_name
+    e = _EAN.get(f"{it['n']}|{it['c']}|{it['p']}")
+    if e and e[0] != 'seb':
+        return e[0], 'código de barras' if e[1] else 'código de barras (revisar)'
+    if e and e[0] == 'seb' and not by_rule:
+        # Groupe SEB shares its barcodes between Tefal, Moulinex, Rowenta and Krups: decide by the kind of product
+        for b, rx in SEB_TIPO:
+            if re.search(rx, it['k']):
+                return b, 'grupo Tefal/Moulinex/Rowenta (revisar)'
+    if by_rule:
+        # a colour or a price is only a hint: never over a barcode, and Tefal/Moulinex/Rowenta only inside their group
+        if by_rule[1] in ('color de Le Creuset', 'cocotte de hierro fundido (precio)') and e:
+            return None, ''
+        return by_rule
     return None, ''

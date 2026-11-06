@@ -16,6 +16,13 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 SECC = ['Sartenes', 'Ollas', 'Café y té', 'Electro', 'Cuchillos', 'Utensilios', 'Repostería', 'Vajilla',
         'Cubertería', 'Cristalería', 'Termos', 'Hogar', 'Cuidado personal', 'Infantil', 'Otros']
 
+import re
+# the old export doubled a suffix when it expanded «antiadh.»
+FIXES = [(re.compile(r'antiadherenteerente', re.I), lambda m: 'Antiadherente' if m.group(0)[0].isupper() else 'antiadherente')]
+def fix(name):
+    for rx, f in FIXES: name = rx.sub(f, name)
+    return name
+
 def norm(s):
     return ' '.join(unicodedata.normalize('NFD', s.lower()).encode('ascii', 'ignore').decode().split())
 
@@ -39,8 +46,11 @@ def main():
             if key not in img_ix:
                 img_ix[key] = len(imgs); imgs.append([f[0], f[1]])
             gi = img_ix[key]
-        out_items.append([it['n'], it['c'], it['s'], it['p'], m, bix.get(b, other), gi])
+        out_items.append([fix(it['n']), it['c'], it['s'], it['p'], m, bix.get(b, other), gi])
     data = {'b': [[b, LOGOS.get(b, '')] for b in order] + [['', '']], 'g': imgs, 'i': out_items}
+    missing = [g[0] for g in imgs if not os.path.exists(os.path.join(ROOT, 'assets/fotos', g[0]))]
+    if missing:
+        sys.exit('Faltan fotos en assets/fotos: ' + ', '.join(missing[:20]))
     with open(os.path.join(ROOT, 'assets/data/tienda.json'), 'w', encoding='utf-8') as fh:
         json.dump(data, fh, ensure_ascii=False, separators=(',', ':'))
     with_img = sum(1 for o in out_items if o[6] >= 0)
