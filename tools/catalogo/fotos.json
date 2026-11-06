@@ -1,8 +1,36 @@
 {
  "logos": {
-  "Le Creuset": "le-creuset.svg",
+  "24Bottles": "24bottles.png",
+  "BaByliss": "babyliss.svg",
+  "Bialetti": "bialetti.png",
+  "Bosch": "bosch.svg",
+  "Braun": "braun.svg",
+  "Brita": "brita.svg",
+  "De'Longhi": "de-longhi.svg",
+  "Emile Henry": "emile-henry.svg",
+  "Emsa": "emsa.svg",
+  "Gillette": "gillette.svg",
+  "Imetec": "imetec.svg",
+  "Joseph Joseph": "joseph-joseph.svg",
+  "Kenwood": "kenwood.svg",
   "Krups": "krups.svg",
-  "Bialetti": "bialetti.png"
+  "Le Creuset": "le-creuset.svg",
+  "Mepal": "mepal.svg",
+  "Microplane": "microplane.png",
+  "Monix": "monix.png",
+  "Moulinex": "moulinex.png",
+  "Nespresso": "nespresso.svg",
+  "Oral-B": "oral-b.png",
+  "Rowenta": "rowenta.png",
+  "Severin": "severin.svg",
+  "Silikomart": "silikomart.svg",
+  "Taurus": "taurus.svg",
+  "Tefal": "tefal.png",
+  "Tescoma": "tescoma.svg",
+  "Thermos": "thermos.png",
+  "Ufesa": "ufesa.svg",
+  "WMF": "wmf.svg",
+  "Zwilling": "zwilling.png"
  },
  "reglas": [
   [

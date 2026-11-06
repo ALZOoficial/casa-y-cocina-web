@@ -383,8 +383,10 @@ h2.t em{font-style:italic;color:var(--neon)}
 .steps:not([data-at="1"]) [data-step="1"] b,.steps[data-at="3"] [data-step="2"] b{background:var(--accent-muted);border-color:var(--accent);color:var(--neon)}
 
 /* brand marks: the logo on a light studio tile so every logo reads on the dark counter */
-.bt-logo,.pc-logo,.bbar-logo{flex:none;display:grid;place-items:center;overflow:hidden;border-radius:10px;background:radial-gradient(ellipse 90% 80% at 50% 35%,#fdfaf5,#efe5d8 75%);box-shadow:inset 0 0 0 1px rgba(90,60,30,.12)}
-:is(.bt-logo,.pc-logo,.bbar-logo) img{width:100%;height:100%;object-fit:contain;padding:12% 10%;mix-blend-mode:multiply}
+.bt-logo,.pc-logo,.bbar-logo{flex:none;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:10px;background:#fff;box-shadow:inset 0 0 0 1px rgba(90,60,30,.10),0 6px 14px -10px rgba(0,0,0,.6)}
+:is(.bt-logo,.pc-logo,.bbar-logo):not(.type):not(.gen){padding:7px 9px}
+:is(.bt-logo,.pc-logo,.bbar-logo) img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.pc-logo:not(.type):not(.gen){padding:5px 6px}
 :is(.bt-logo,.pc-logo,.bbar-logo).type span{font-family:var(--f-brand);font-weight:700;color:#2a1c12;text-align:center;line-height:1.05;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;padding:0 8%;font-size:min(var(--fmax,19px),calc(var(--w) * 1.08 / var(--n)))}
 :is(.bt-logo,.pc-logo,.bbar-logo).gen{background:var(--panel-2);box-shadow:inset 0 0 0 1px var(--line);color:var(--accent)}
 :is(.bt-logo,.pc-logo,.bbar-logo).gen svg{width:52%;height:52%}
