@@ -56,7 +56,7 @@ const T = {
     tw: ['Sartén', 'Cafetera', 'Olla a presión', 'Termo', 'Cocotte', 'Molde'],
     'cat.note': 'Los precios son los de la tienda y pueden cambiar. Llama o escribe por WhatsApp para confirmar que lo tenemos.',
     'cat.label': 'Buscar', 'cat.ph': 'Sartén, cafetera, termo…', 'cat.qhelp': 'Busca por el principio del nombre: «ca» encuentra cafeteras, cazos y cacerolas.',
-    'cat.sort': 'Ordenar', 'cat.sortAz': 'Nombre, de la A a la Z', 'cat.sortPa': 'Precio, de menor a mayor', 'cat.sortPd': 'Precio, de mayor a menor',
+    'cat.sort': 'Ordenar', 'cat.sortRec': 'Recomendados', 'cat.sortAz': 'Nombre, de la A a la Z', 'cat.sortPa': 'Precio, de menor a mayor', 'cat.sortPd': 'Precio, de mayor a menor',
     'cat.steps': 'Pasos', 'cat.step1': 'Marca', 'cat.step2': 'Categoría', 'cat.step3': 'Artículo y precio',
     'cat.pickBrand': 'Elige una marca', 'cat.pickBrandSub': '{n} marcas en tienda. O escribe arriba para buscar en todo el catálogo.',
     'cat.pickSec': 'Elige una categoría', 'cat.allSecs': 'Todas', 'cat.allBrands': 'Todas las marcas', 'cat.otherBrands': 'Otras marcas',
@@ -126,7 +126,7 @@ const T = {
     tw: ['Sartén', 'Cafetera', 'Olla a presión', 'Termo', 'Cocotte', 'Molde'],
     'cat.note': 'Prices are in-store prices and may change. Call or message us on WhatsApp to check we have it.',
     'cat.label': 'Search', 'cat.ph': 'Sartén, cafetera, termo…', 'cat.qhelp': 'Type the start of the name (item names are in Spanish): “ca” finds cafeteras, cazos and cacerolas.',
-    'cat.sort': 'Sort by', 'cat.sortAz': 'Name, A to Z', 'cat.sortPa': 'Price, low to high', 'cat.sortPd': 'Price, high to low',
+    'cat.sort': 'Sort by', 'cat.sortRec': 'Recommended', 'cat.sortAz': 'Name, A to Z', 'cat.sortPa': 'Price, low to high', 'cat.sortPd': 'Price, high to low',
     'cat.steps': 'Steps', 'cat.step1': 'Brand', 'cat.step2': 'Category', 'cat.step3': 'Item and price',
     'cat.pickBrand': 'Pick a brand', 'cat.pickBrandSub': '{n} brands in store. Or type above to search the whole catalogue.',
     'cat.pickSec': 'Pick a category', 'cat.allSecs': 'All', 'cat.allBrands': 'All brands', 'cat.otherBrands': 'Other brands',
@@ -599,7 +599,7 @@ $$('.gap-mq').forEach(m => new IntersectionObserver(es => m.classList.toggle('li
 /* ---------------- Catalogue: brand → category → item ---------------- */
 // tienda.json: b brands [[name, logo]] (the last one is «Otras marcas»), g photos [[file, exact]], i items [[name, section, sizes, price, from, brand, photo]]
 let CAT = null, BR = [], IMG = [], catPromise = null, catFailed = false;
-const cat = { brand: null, sec: -1, sort: 'az', limit: 24 };   // brand: null = not chosen yet, -1 = all brands
+const cat = { brand: null, sec: -1, sort: 'rec', limit: 24 };   // brand: null = not chosen yet, -1 = all brands
 const PAGE = 24;
 const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim();
 function ensureCatalog() {
@@ -652,7 +652,7 @@ function photoOf(it) { const g = IMG[it.g]; return g ? { src: 'assets/fotos/' + 
 
 function renderSort() {
   const sel = $('#sortSel');
-  sel.innerHTML = [['az', t('cat.sortAz')], ['pa', t('cat.sortPa')], ['pd', t('cat.sortPd')]].map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join('');
+  sel.innerHTML = [['rec', t('cat.sortRec')], ['az', t('cat.sortAz')], ['pa', t('cat.sortPa')], ['pd', t('cat.sortPd')]].map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join('');
   sel.value = cat.sort;
 }
 // mark the typed start of the name
@@ -737,7 +737,10 @@ function renderResults() {
   if (cat.brand === null && !q) { count.textContent = ''; list.innerHTML = ''; more.hidden = true; return; }
   // only names that START with what was typed
   let r = CAT.filter(it => (cat.brand === null || cat.brand < 0 || it.b === cat.brand) && (cat.sec < 0 || it.c === cat.sec) && (!q || it.k.startsWith(q)));
-  if (cat.sort === 'pa') r = r.slice().sort((a, b) => a.p - b.p);
+  // recommended: items with a photo first (exact, then indicative), then the rest; A to Z inside each group (CAT is already A to Z)
+  const rank = it => it.g < 0 ? 2 : IMG[it.g][1] ? 0 : 1;
+  if (cat.sort === 'rec') r = r.slice().sort((a, b) => rank(a) - rank(b));
+  else if (cat.sort === 'pa') r = r.slice().sort((a, b) => a.p - b.p);
   else if (cat.sort === 'pd') r = r.slice().sort((a, b) => b.p - a.p);
   if (!r.length) {
     count.textContent = '';
