@@ -25,64 +25,6 @@ const SECTIONS = [
   ['infantil', 'Infantil', 'Kids', 165]
 ];
 const OTHER = ['Otros', 'Other'];
-// [brand, es, en, image, price from, section index]
-const PRODUCTS = [
-  ['Kuhn Rikon', 'Allround, paellera 36 cm', 'Allround paella pan, 36 cm', 'p-kr-paella', null, 0],
-  ['Kuhn Rikon', 'Easy Induction 26 cm', 'Easy Induction, 26 cm', 'p-kr-easy26', null, 0],
-  ['Kuhn Rikon', 'Allround Wok', 'Allround Wok', 'p-kr-wok', null, 0],
-  ['Kuhn Rikon', 'Easy Induction Grill', 'Easy Induction Grill', 'p-kr-grill', null, 0],
-  ['Kuhn Rikon', 'Easy Induction Marble', 'Easy Induction Marble', 'p-kr-marble', null, 0],
-  ['Le Creuset', 'Wok antiadherente', 'Non-stick wok', 'p-lc-wok', null, 0],
-  ['Le Creuset', 'Sartenes antiadherentes', 'Non-stick frying pans', 'p-lc-sarten', null, 0],
-  ['BRA', 'The One Titanium', 'The One Titanium', 'p-bra-one', null, 0],
-  ['Tefal', 'Aroma', 'Aroma', 'p-tefal-aroma', 29, 0],
-  ['Le Creuset', 'Cocottes de hierro fundido', 'Cast iron casseroles', 'p-lc-cocottes', null, 1],
-  ['Le Creuset', 'Cocotte calabaza 24 cm', 'Pumpkin casserole, 24 cm', 'p-lc-calabaza', 250, 1],
-  ['Kuhn Rikon', 'Ollas a presión Duromatic', 'Duromatic pressure cookers', 'p-kr-duromatic', 178, 1],
-  ['Kuhn Rikon', 'Ollas de acero inoxidable', 'Stainless steel pots', 'p-kr-inox', null, 1],
-  ['Bialetti', 'Moka Express', 'Moka Express', 'p-bia-express', 33, 2],
-  ['Bialetti', 'Moka Induction', 'Moka Induction', 'p-bia-induction', 42, 2],
-  ['Bialetti', 'Brikka', 'Brikka', 'p-bia-brikka', 53, 2],
-  ['Monix', 'Cafetera italiana', 'Stovetop coffee maker', 'p-monix', null, 2],
-  ['Le Creuset', 'Hervidores esmaltados', 'Enamel kettles', 'p-lc-hervidor', null, 2],
-  ['Moulinex', 'Easy Fry & Grill', 'Easy Fry & Grill', 'p-mx-easyfry', 110, 3],
-  ['Tefal', 'OptiGrill+ Initial', 'OptiGrill+ Initial', 'p-tefal-optigrill', 130, 3],
-  ['Moulinex', 'Lightmix, batidora portátil', 'Lightmix portable blender', 'p-mx-lightmix', null, 3],
-  ['Lékué', 'Microwave Omelette', 'Microwave Omelette', 'p-lk-omelette', 14.5, 5],
-  ['Lékué', 'Microwave Spanish Omelette', 'Microwave Spanish Omelette', 'p-lk-tortilla', 15.5, 5],
-  ['Lékué', 'Microwave Ovo', 'Microwave Ovo', 'p-lk-ovo', null, 5],
-  ['Lékué', 'Glass Steam Cooker', 'Glass Steam Cooker', 'p-lk-steam', null, 5],
-  ['Lékué', 'Fuentes de cristal para freidora de aire', 'Air fryer glass dishes', 'p-lk-glassdish', null, 5],
-  ['Lékué', 'Veggie Drinks Maker', 'Veggie Drinks Maker', 'p-lk-veggiedrinks', null, 5],
-  ['Lékué', 'Kefir & Yogurt Maker', 'Kefir & Yogurt Maker', 'p-lk-kefir', 22, 5],
-  ['Brita', 'Jarra filtrante Marella', 'Marella filter jug', 'p-brita-marella', 20, 5],
-  ['Brita', 'Jarra filtrante de cristal', 'Glass filter jug', 'p-brita-cristal', null, 5],
-  ['Le Creuset', 'Set de 2 manoplas', 'Set of 2 pot holders', 'p-lc-manoplas', null, 5],
-  ['Le Creuset', 'Tapa antisalpicaduras', 'Splatter guard', 'p-lc-salpicaduras', null, 5],
-  ['Joseph Joseph', 'Organizadores de cajón', 'Drawer organisers', 'p-jj-cajon', null, 5],
-  ['Lékué', 'Pan de molde 25 cm', 'Sandwich bread mould, 25 cm', 'p-lk-panmolde', null, 6],
-  ['Lékué', 'Molde Duo de silicona y cerámica', 'Duo silicone & ceramic mould', 'p-lk-duo', null, 6],
-  ['Lékué', 'Pizza & Baking Mat', 'Pizza & Baking Mat', 'p-lk-pizza', 15, 6],
-  ['Lékué', 'Veggie Burger', 'Veggie Burger', 'p-lk-veggieburger', 9, 6],
-  ['Le Creuset', 'Gres esmaltado: jarras y mantequeras', 'Stoneware jugs & butter dishes', 'p-lc-gres', null, 7],
-  ['Le Creuset', 'Cuencos y platos de colores', 'Coloured bowls & plates', 'p-lc-cuencos', null, 7],
-  ['Tokyo Design Studio', 'Cuencos de estilo japonés', 'Japanese-style bowls', 'p-tokyo', null, 7],
-  ['Le Creuset', 'Botella isotérmica 500 ml', 'Insulated bottle, 500 ml', 'p-lc-botella', null, 10],
-  ['Le Creuset', 'Travel Mug 350 ml', 'Travel Mug, 350 ml', 'p-lc-travelmug', null, 10],
-  ['B Bottles', 'Twin', 'Twin', 'p-bbottles-twin', null, 10],
-  ['Rowenta', 'X-Force Flex', 'X-Force Flex', 'p-rowenta-xforce', 260, 11],
-  ['Brabantia', 'Tabla de planchar 124 × 38 cm', 'Ironing board, 124 × 38 cm', 'p-brabantia-tabla', null, 11],
-  ['Metaltex', 'Tendedero Storm 34 m', 'Storm drying rack, 34 m', 'p-metaltex-storm', null, 11],
-  ['Playmarket', 'Carro de la compra', 'Shopping trolley', 'p-playmarket', null, 11],
-  ['Braun', 'Series 9 Pro+', 'Series 9 Pro+', 'p-braun-s9', 350, 12],
-  ['Braun', 'Satin Hair 7', 'Satin Hair 7', 'p-braun-satin', null, 12],
-  ['Oral-B', 'Cepillos eléctricos', 'Electric toothbrushes', 'p-oralb', null, 12],
-  [null, 'Botellas y fiambreras infantiles', 'Kids’ bottles & lunch boxes', 'p-infantil', null, 13]
-];
-// products still shown with the shop's own photo (no matching official packshot found)
-const SHOP_PHOTO = new Set(['p-braun-satin', 'p-tokyo', 'p-metaltex-storm', 'p-lk-veggiedrinks', 'p-infantil']);
-// packshots shot on a tinted sweep: their edges are feathered into the card's backdrop
-const SOFT_EDGE = new Set(['p-bra-one', 'p-tefal-aroma', 'p-brita-marella', 'p-brita-cristal', 'p-monix']);
 // minutes from midnight; index 0 = Sunday
 const HOURS = [[], [[570, 810], [1050, 1230]], [[570, 810], [1050, 1230]], [[570, 810], [1050, 1230]], [[570, 810], [1050, 1230]], [[570, 810], [1050, 1230]], [[630, 840]]];
 
@@ -90,7 +32,7 @@ const HOURS = [[], [[570, 810], [1050, 1230]], [[570, 810], [1050, 1230]], [[570
 const T = {
   es: {
     skip: 'Saltar al contenido', navLabel: 'Principal', langLabel: 'Idioma',
-    'nav.shop': 'Tienda', 'nav.sections': 'Secciones', 'nav.brands': 'Marcas', 'nav.catalogue': 'Catálogo', 'nav.press': 'Prensa', 'nav.visit': 'Visítanos',
+    'nav.shop': 'Tienda', 'nav.sections': 'Secciones', 'nav.catalogue': 'Catálogo', 'nav.press': 'Prensa', 'nav.visit': 'Visítanos',
     'cta.directions': 'Cómo llegar', 'cta.catalogue': 'Ver catálogo',
     'hero.b1': 'Menaje, cocina y hogar en Ceuta.', 'hero.b1s': 'Desde hace más de 30 años.',
     'hero.b2': 'Balda a balda.', 'hero.b2s': 'Catorce secciones y miles de artículos, todo a mano.',
@@ -108,21 +50,24 @@ const T = {
     mqPress: ['El Faro de Ceuta', 'Reportaje', 'RTVCE', 'FaroTV', 'Radio Televisión Ceuta', 'Ceuta'],
     mqReviews: ['Gracias', 'Buen trato', 'Consejo', 'Calidad', 'Confianza', 'Cercanía'],
     mqVisit: ['C/ Solís, 4', '51001 Ceuta', 'Centro', 'Lunes a sábado', 'Te esperamos'],
-    'br.eyebrow': 'Marcas', 'br.title': 'Marcas que conoces, en tu barrio.',
-    'br.lede': 'Le Creuset, Kuhn Rikon, Bialetti, Lékué, Braun y más. Estos son algunos de los productos que puedes ver y tocar en la tienda.',
-    'br.filter': 'Filtrar por marca', 'br.all': 'Todas', 'br.from': 'Desde', 'br.ask': 'Pregunta en tienda',
-    'br.other': 'Varias marcas', 'br.region': 'Escaparate de productos', 'br.hint': 'Arrastra o usa las flechas',
-    'br.askWa': 'Pregúntanos por WhatsApp', 'br.waMsg': 'Hola, ¿tenéis {p}?',
     'cat.eyebrow': 'Catálogo', 'cat.title': 'Busca un artículo.',
-    'cat.lede': 'Busca por nombre o elige una sección y mira el precio antes de venir.',
+    'cat.lede': 'Elige una marca, después la categoría, y mira el precio antes de venir.',
     'cat.s1': 'artículos con precio', 'cat.s2': 'secciones',
-    tw: ['Sartén 28', 'Cafetera italiana', 'Termo 500 ml', 'Olla a presión', 'Tabla de planchar', 'Molde de silicona'],
+    tw: ['Sartén', 'Cafetera', 'Olla a presión', 'Termo', 'Cocotte', 'Molde'],
     'cat.note': 'Los precios son los de la tienda y pueden cambiar. Llama o escribe por WhatsApp para confirmar que lo tenemos.',
-    'cat.label': 'Buscar', 'cat.ph': 'Sartén 28, cafetera, termo…', 'cat.section': 'Sección', 'cat.all': 'Todas las secciones',
-    'cat.count': '{n} resultados', 'cat.count1': '1 resultado', 'cat.hint': 'Escribe al menos dos letras o elige una sección.',
-    'cat.none': 'No encontramos «{q}». Prueba con otra palabra o pregúntanos.', 'cat.loading': 'Cargando catálogo…',
-    'cat.error': 'No se pudo cargar el catálogo. Inténtalo de nuevo.', 'cat.more': 'Ver más resultados', 'cat.from': 'desde',
-    sugg: ['Sartén', 'Cafetera', 'Olla', 'Termo', 'Cuchillo', 'Taza', 'Plancha', 'Molde'],
+    'cat.label': 'Buscar', 'cat.ph': 'Sartén, cafetera, termo…', 'cat.qhelp': 'Busca por el principio del nombre: «ca» encuentra cafeteras, cazos y cacerolas.',
+    'cat.sort': 'Ordenar', 'cat.sortAz': 'Nombre, de la A a la Z', 'cat.sortPa': 'Precio, de menor a mayor', 'cat.sortPd': 'Precio, de mayor a menor',
+    'cat.steps': 'Pasos', 'cat.step1': 'Marca', 'cat.step2': 'Categoría', 'cat.step3': 'Artículo y precio',
+    'cat.pickBrand': 'Elige una marca', 'cat.pickBrandSub': '{n} marcas en tienda. O escribe arriba para buscar en todo el catálogo.',
+    'cat.pickSec': 'Elige una categoría', 'cat.allSecs': 'Todas', 'cat.allBrands': 'Todas las marcas', 'cat.otherBrands': 'Otras marcas',
+    'cat.change': 'Cambiar marca', 'cat.items': '{n} artículos', 'cat.items1': '1 artículo',
+    'cat.count': '{n} artículos', 'cat.count1': '1 artículo', 'cat.startWith': 'que empiezan por «{q}»',
+    'cat.none': 'Ningún artículo empieza por «{q}». Prueba con el principio de otra palabra o pregúntanos.', 'cat.noneHere': 'No hay artículos aquí.',
+    'cat.loading': 'Cargando catálogo…', 'cat.error': 'No se pudo cargar el catálogo. Inténtalo de nuevo.',
+    'cat.more': 'Ver más artículos', 'cat.moreN': 'Ver {n} artículos más', 'cat.from': 'desde',
+    'cat.zoom': 'Ver la foto de {p} en grande', 'cat.approx': 'Orientativa', 'cat.approxLong': 'Imagen orientativa: el modelo o el color de la tienda pueden ser distintos.',
+    'cat.noPhoto': 'Aún no tenemos foto de este artículo. Pregúntanos y te la enviamos.',
+    'cat.askWa': 'Pregúntanos por WhatsApp', 'cat.waMsg': 'Hola, ¿tenéis {p}?',
     'store.altFacade': 'Fachada de Casa & Cocina en la calle Solís, 4',
     'walk.p1': 'Empezamos en la calle Velarde y hoy te esperamos en la calle Solís, 4.',
     'walk.p2': 'Pasillos llenos, todo a mano y alguien que te atiende de verdad.',
@@ -134,6 +79,9 @@ const T = {
     'tour.alt1': 'Pasillo de la tienda hacia el fondo', 'tour.alt2': 'Mostrador con ollas a presión y baldas de Le Creuset', 'tour.alt3': 'Pared de cocottes y vajilla Le Creuset de colores',
     'pr.eyebrow': 'Prensa', 'pr.title': 'Nos han visitado.', 'pr.lede': 'El Faro de Ceuta y Radio Televisión Ceuta vinieron a conocernos.',
     'pr.kick': 'Reportaje', 'pr.q2': '«Una tienda especializada en dar a tu hogar un toque especial.»',
+    'pr.faroKick': 'También en prensa', 'pr.faroPre': 'También nos ha visitado', 'pr.faroPost': '.',
+    'pr.faroSub': 'Pulsa el faro para ver su reportaje en YouTube.', 'pr.faroCta': 'Ver el reportaje',
+    'pr.faroAria': 'Ver el reportaje de El Faro de Ceuta en YouTube (se abre en una pestaña nueva)',
     'lb.label': 'Vídeo', 'lb.close': 'Cerrar', 'lb.open': 'Ver en {s}',
     'wa.label': 'Escríbenos por WhatsApp', 'wa.tip': 'Escríbenos por WhatsApp', 'wa.msg': 'Hola, os escribo desde la web.',
     'pr.yt': 'Al pulsar se carga el vídeo desde YouTube.', 'pr.fb': 'Al pulsar se carga el vídeo desde Facebook.', 'pr.play': 'Reproducir vídeo',
@@ -154,7 +102,7 @@ const T = {
   },
   en: {
     skip: 'Skip to content', navLabel: 'Main', langLabel: 'Language',
-    'nav.shop': 'The shop', 'nav.sections': 'Sections', 'nav.brands': 'Brands', 'nav.catalogue': 'Catalogue', 'nav.press': 'Press', 'nav.visit': 'Visit us',
+    'nav.shop': 'The shop', 'nav.sections': 'Sections', 'nav.catalogue': 'Catalogue', 'nav.press': 'Press', 'nav.visit': 'Visit us',
     'cta.directions': 'Get directions', 'cta.catalogue': 'Browse the catalogue',
     'hero.b1': 'Cookware, kitchen and home in Ceuta.', 'hero.b1s': 'For more than 30 years.',
     'hero.b2': 'Shelf by shelf.', 'hero.b2s': 'Fourteen sections and thousands of items, all within reach.',
@@ -172,21 +120,24 @@ const T = {
     mqPress: ['El Faro de Ceuta', 'Report', 'RTVCE', 'FaroTV', 'Radio Televisión Ceuta', 'Ceuta'],
     mqReviews: ['Thank you', 'Kind service', 'Advice', 'Quality', 'Trust', 'Neighbours'],
     mqVisit: ['C/ Solís, 4', '51001 Ceuta', 'Town centre', 'Monday to Saturday', 'See you soon'],
-    'br.eyebrow': 'Brands', 'br.title': 'Brands you know, in your neighbourhood.',
-    'br.lede': 'Le Creuset, Kuhn Rikon, Bialetti, Lékué, Braun and more. These are some of the products you can see and handle in the shop.',
-    'br.filter': 'Filter by brand', 'br.all': 'All', 'br.from': 'From', 'br.ask': 'Ask in store',
-    'br.other': 'Various brands', 'br.region': 'Product showcase', 'br.hint': 'Drag or use the arrows',
-    'br.askWa': 'Ask us on WhatsApp', 'br.waMsg': 'Hello, do you have {p}?',
     'cat.eyebrow': 'Catalogue', 'cat.title': 'Find an item.',
-    'cat.lede': 'Search by name or pick a section, and check the price before you come in.',
+    'cat.lede': 'Pick a brand, then a category, and check the price before you come in.',
     'cat.s1': 'items with prices', 'cat.s2': 'sections',
-    tw: ['Sartén 28', 'Cafetera italiana', 'Termo 500 ml', 'Olla a presión', 'Tabla de planchar', 'Molde de silicona'],
+    tw: ['Sartén', 'Cafetera', 'Olla a presión', 'Termo', 'Cocotte', 'Molde'],
     'cat.note': 'Prices are in-store prices and may change. Call or message us on WhatsApp to check we have it.',
-    'cat.label': 'Search', 'cat.ph': 'Frying pan 28, coffee maker, flask…', 'cat.section': 'Section', 'cat.all': 'All sections',
-    'cat.count': '{n} results', 'cat.count1': '1 result', 'cat.hint': 'Type at least two letters or pick a section. Item names are in Spanish.',
-    'cat.none': 'We couldn’t find “{q}”. Try another word or ask us.', 'cat.loading': 'Loading catalogue…',
-    'cat.error': 'The catalogue could not load. Please try again.', 'cat.more': 'Show more results', 'cat.from': 'from',
-    sugg: ['Sartén', 'Cafetera', 'Olla', 'Termo', 'Cuchillo', 'Taza', 'Plancha', 'Molde'],
+    'cat.label': 'Search', 'cat.ph': 'Sartén, cafetera, termo…', 'cat.qhelp': 'Type the start of the name (item names are in Spanish): “ca” finds cafeteras, cazos and cacerolas.',
+    'cat.sort': 'Sort by', 'cat.sortAz': 'Name, A to Z', 'cat.sortPa': 'Price, low to high', 'cat.sortPd': 'Price, high to low',
+    'cat.steps': 'Steps', 'cat.step1': 'Brand', 'cat.step2': 'Category', 'cat.step3': 'Item and price',
+    'cat.pickBrand': 'Pick a brand', 'cat.pickBrandSub': '{n} brands in store. Or type above to search the whole catalogue.',
+    'cat.pickSec': 'Pick a category', 'cat.allSecs': 'All', 'cat.allBrands': 'All brands', 'cat.otherBrands': 'Other brands',
+    'cat.change': 'Change brand', 'cat.items': '{n} items', 'cat.items1': '1 item',
+    'cat.count': '{n} items', 'cat.count1': '1 item', 'cat.startWith': 'starting with “{q}”',
+    'cat.none': 'No item starts with “{q}”. Try the start of another word, or ask us.', 'cat.noneHere': 'There are no items here.',
+    'cat.loading': 'Loading catalogue…', 'cat.error': 'The catalogue could not load. Please try again.',
+    'cat.more': 'Show more items', 'cat.moreN': 'Show {n} more items', 'cat.from': 'from',
+    'cat.zoom': 'See a larger photo of {p}', 'cat.approx': 'Indicative', 'cat.approxLong': 'Indicative image: the model or colour in store may differ.',
+    'cat.noPhoto': 'We don’t have a photo of this item yet. Ask us and we’ll send you one.',
+    'cat.askWa': 'Ask us on WhatsApp', 'cat.waMsg': 'Hello, do you have {p}?',
     'store.altFacade': 'Casa & Cocina shop front on Calle Solís, 4',
     'walk.p1': 'We started on Calle Velarde and today you will find us at Calle Solís, 4.',
     'walk.p2': 'Full aisles, everything within reach and real people to help you.',
@@ -198,6 +149,9 @@ const T = {
     'tour.alt1': 'The shop aisle leading to the back', 'tour.alt2': 'Counter with pressure cookers and Le Creuset shelves', 'tour.alt3': 'A wall of colourful Le Creuset casseroles and tableware',
     'pr.eyebrow': 'Press', 'pr.title': 'They came to visit.', 'pr.lede': 'El Faro de Ceuta and Radio Televisión Ceuta came to see us.',
     'pr.kick': 'TV report', 'pr.q2': '“A shop that specialises in giving your home a special touch.”',
+    'pr.faroKick': 'Also in the press', 'pr.faroPre': 'We were also visited by', 'pr.faroPost': '.',
+    'pr.faroSub': 'Tap the lighthouse to watch their report on YouTube.', 'pr.faroCta': 'Watch the report',
+    'pr.faroAria': 'Watch El Faro de Ceuta’s report on YouTube (opens in a new tab)',
     'lb.label': 'Video', 'lb.close': 'Close', 'lb.open': 'Watch on {s}',
     'wa.label': 'Message us on WhatsApp', 'wa.tip': 'Message us on WhatsApp', 'wa.msg': 'Hello, I’m writing to you from your website.',
     'pr.yt': 'Pressing play loads the video from YouTube.', 'pr.fb': 'Pressing play loads the video from Facebook.', 'pr.play': 'Play video',
@@ -262,7 +216,7 @@ function applyLang() {
   $$('[data-i18n-alt]').forEach(el => el.alt = t(el.dataset.i18nAlt));
   $$('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
   $$('.stat dt').forEach(dt => { if (dt.dataset.done) dt.textContent = (dt.dataset.prefix || '') + fmtNum(+dt.dataset.count); });
-  renderSections(); renderChips(); if (slides.length) refreshShowText(); else buildShow(); renderSelect(); renderResults(); renderHours(); tourText(); renderGapRibbons();
+  renderSections(); renderSort(); renderResults(); renderHours(); tourText(); renderGapRibbons();
   $('#waFloat').href = 'https://wa.me/34956512987?text=' + encodeURIComponent(t('wa.msg'));
   bands.forEach(b => { b.op = -1; b.k = -1; });
   signGeo = null;
@@ -613,8 +567,9 @@ reel.addEventListener('pointerout', e => {
 reel.addEventListener('click', e => {
   if (reelMoved) { reelMoved = false; e.preventDefault(); return; }   // a drag is not a click
   const b = e.target.closest('[data-sec]'); if (!b) return;
-  secFilter = +b.dataset.sec; $('#secSel').value = String(secFilter); limit = 30;
-  ensureCatalog().then(renderResults);
+  // a section opens the catalogue on that category, across every brand
+  cat.brand = -1; cat.sec = +b.dataset.sec; cat.limit = PAGE; $('#q').value = '';
+  ensureCatalog().then(renderResults).catch(() => renderResults());
   $('#catalogo').scrollIntoView({ behavior: RM.matches ? 'auto' : 'smooth' });
   setTimeout(() => $('#q').focus({ preventScroll: true }), 700);
 });
@@ -627,7 +582,6 @@ new IntersectionObserver(es => $('#secciones').classList.toggle('live', es[0].is
 // outline-type ribbons in the empty gaps between sections; each list is written twice for a seamless loop
 function renderGapRibbons() {
   const ribbon = (words, sep = '<i></i>') => { const h = words.map(w => `<span>${esc(w)}</span>${sep}`).join(''); return h + h; };
-  $('#mqBrands').innerHTML = ribbon(BRANDS_ALL);
   $('#mqCat').innerHTML = ribbon(T[lang].mqCat);
   $('#mqPress').innerHTML = ribbon(T[lang].mqPress);
   $('#mqReviews').innerHTML = ribbon(T[lang].mqReviews, '<i class="st"></i>');
@@ -640,198 +594,229 @@ function ribbonSpeed() {
 }
 if (document.fonts) document.fonts.ready.then(ribbonSpeed);
 addEventListener('resize', ribbonSpeed, { passive: true });
-const BRANDS_ALL = ['Le Creuset', 'Kuhn Rikon', 'Bialetti', 'Lékué', 'Braun', 'Brita', 'Moulinex', 'Tefal', 'Rowenta', 'Joseph Joseph', 'Brabantia', 'Oral-B', 'BRA', 'Monix'];
 $$('.gap-mq').forEach(m => new IntersectionObserver(es => m.classList.toggle('live', es[0].isIntersecting)).observe(m));
 
-/* ---------------- Brands ---------------- */
-let brand = null;
-const BRANDS = [...new Set(PRODUCTS.map(p => p[0]).filter(Boolean))];
-function renderChips() {
-  $('#chips').innerHTML = [`<button type="button" class="chip" data-brand="" aria-pressed="${brand === null}">${t('br.all')}</button>`]
-    .concat(BRANDS.map(b => `<button type="button" class="chip" data-brand="${esc(b)}" aria-pressed="${brand === b}">${esc(b)}</button>`)).join('');
-}
-$('#chips').addEventListener('click', e => {
-  const c = e.target.closest('[data-brand]'); if (!c) return;
-  brand = c.dataset.brand || null; stopAuto(); renderChips(); buildShow();
-});
-/* Rotating showcase: one row in 3D, the centre product large, the rest receding.
-   pos is a float slide index eased toward target, so drags, flings and clicks share one renderer. */
-const show = $('#show'), showStage = $('#showStage');
-let list = [], slides = [], pos = 0, posTarget = 0, showRaf = null, showLast = 0, curIdx = -1, cw = 300, drag = null, justDragged = false;
-const nameOf = p => lang === 'es' ? p[1] : p[2];
-const wrap = (d, n) => { d = ((d % n) + n) % n; return d > n / 2 ? d - n : d; };
-
-function buildShow() {
-  list = PRODUCTS.filter(p => !brand || p[0] === brand);
-  showStage.innerHTML = list.map((p, i) => `
-    <button type="button" class="slide" data-i="${i}" tabindex="-1" aria-label="${esc([p[0], nameOf(p)].filter(Boolean).join(' '))}">
-      <div class="ph${SHOP_PHOTO.has(p[3]) ? ' photo' : ''}${SOFT_EDGE.has(p[3]) ? ' soft' : ''}"><img src="assets/${SHOP_PHOTO.has(p[3]) ? 'prod' : 'pack'}/${p[3]}.webp" alt="" loading="lazy" width="600" height="750" draggable="false"></div>
-      <span class="shade"></span>
-    </button>`).join('');
-  slides = $$('.slide', showStage).map(el => ({ el, k: '' }));
-  pos = posTarget = 0; curIdx = -1;
-  measureShow(); layoutShow();
-}
-function measureShow() { cw = slides[0] ? slides[0].el.offsetWidth : 300; slides.forEach(s => s.k = ''); }
-function layoutShow() {
-  const n = list.length; if (!n) return;
-  const s1 = cw * 0.92, s2 = cw * 0.46;
-  slides.forEach((s, i) => {
-    const d = n > 1 ? wrap(i - pos, n) : 0, ad = Math.abs(d);
-    const x = Math.sign(d) * (ad <= 1 ? ad * s1 : s1 + (ad - 1) * s2);
-    const ry = -clamp(d, -1, 1) * 34, z = -Math.min(ad, 4) * 150, sc = 1 - Math.min(ad, 3) * 0.05;
-    const op = ad > 3.4 ? 0 : clamp(1 - (ad - 2.4), 0, 1);
-    const k = `${x.toFixed(1)}|${z}|${ry.toFixed(1)}|${op.toFixed(2)}`;
-    if (k === s.k) return;
-    s.k = k;
-    s.el.style.transform = `translate(-50%,-50%) translate3d(${x.toFixed(1)}px,0,${z.toFixed(0)}px) rotateY(${ry.toFixed(1)}deg) scale(${sc.toFixed(3)})`;
-    s.el.style.opacity = op.toFixed(2);
-    s.el.style.zIndex = String(100 - Math.round(ad * 10));
-    s.el.style.visibility = op <= 0 ? 'hidden' : '';
-    s.el.style.setProperty('--sh', Math.min(ad * 0.24, 0.62).toFixed(2));
-  });
-  const idx = ((Math.round(pos) % n) + n) % n;
-  if (idx !== curIdx) { curIdx = idx; updateShowInfo(); }
-}
-function updateShowInfo(animate = true) {
-  const p = list[curIdx]; if (!p) return;
-  $('#siBrand').textContent = p[0] || t('br.other');
-  $('#siName').textContent = nameOf(p);
-  $('#siCount').textContent = `${String(curIdx + 1).padStart(2, '0')} / ${String(list.length).padStart(2, '0')}`;
-  $('#siBar').style.transform = `scaleX(${((curIdx + 1) / list.length).toFixed(3)})`;
-  const msg = t('br.waMsg', { p: [p[0], nameOf(p)].filter(Boolean).join(' ') });
-  $('#siAsk').href = 'https://wa.me/34956512987?text=' + encodeURIComponent(msg);
-  slides.forEach((s, i) => s.el.setAttribute('aria-current', i === curIdx ? 'true' : 'false'));
-  if (animate && !RM.matches && $('.show-info .txt').animate) {
-    $('.show-info .txt').animate([{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }], { duration: 480, easing: 'cubic-bezier(.22,1,.36,1)' });
-  }
-}
-function refreshShowText() {
-  slides.forEach((s, i) => s.el.setAttribute('aria-label', [list[i][0], nameOf(list[i])].filter(Boolean).join(' ')));
-  updateShowInfo(false);
-}
-function showTick(now) {
-  const dt = Math.min(100, now - (showLast || now)); showLast = now;
-  if (!drag) {
-    pos += (posTarget - pos) * (RM.matches ? 1 : 1 - Math.pow(1 - 0.12, dt / 16.667));
-    if (Math.abs(posTarget - pos) < 0.001) pos = posTarget;
-  }
-  layoutShow();
-  if (drag || pos !== posTarget) showRaf = requestAnimationFrame(showTick);
-  else { showRaf = null; showLast = 0; }
-}
-function kickShow() { if (showRaf === null) showRaf = requestAnimationFrame(showTick); }
-function step(delta) { posTarget = Math.round(posTarget) + delta; kickShow(); }
-function goTo(i) { posTarget = Math.round(posTarget + wrap(i - posTarget, list.length)); kickShow(); }
-
-$$('.show-nav').forEach(b => b.addEventListener('click', () => { stopAuto(); step(+b.dataset.step); }));
-show.addEventListener('keydown', e => {
-  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); stopAuto(); step(e.key === 'ArrowRight' ? 1 : -1); }
-});
-showStage.addEventListener('click', e => {
-  if (justDragged) { justDragged = false; return; }
-  const s = e.target.closest('.slide'); if (!s) return;
-  stopAuto(); goTo(+s.dataset.i);
-});
-show.addEventListener('pointerdown', e => {
-  if (e.button !== 0 || e.target.closest('.show-nav')) return;
-  stopAuto();
-  drag = { x: e.clientX, p: pos, moved: false, id: e.pointerId, vx: 0, lx: e.clientX, lt: performance.now() };
-  kickShow();
-});
-show.addEventListener('pointermove', e => {
-  if (!drag || e.pointerId !== drag.id) return;
-  const dx = e.clientX - drag.x;
-  if (!drag.moved && Math.abs(dx) > 6) {
-    drag.moved = true; show.classList.add('dragging');
-    try { show.setPointerCapture(e.pointerId); } catch (err) { /* pointer already released */ }
-  }
-  if (!drag.moved) return;
-  pos = drag.p - dx / (cw * 0.8);
-  const now = performance.now();
-  drag.vx = 0.8 * drag.vx + 0.2 * ((e.clientX - drag.lx) / Math.max(1, now - drag.lt));
-  drag.lx = e.clientX; drag.lt = now;
-});
-function endDrag() {
-  if (!drag) return;
-  const d = drag; drag = null; show.classList.remove('dragging');
-  if (d.moved) { justDragged = true; setTimeout(() => { justDragged = false; }, 50); posTarget = Math.round(pos - d.vx * 220 / (cw * 0.8)); }
-  kickShow();
-}
-['pointerup', 'pointercancel', 'lostpointercapture'].forEach(ev => show.addEventListener(ev, endDrag));
-addEventListener('resize', () => { measureShow(); layoutShow(); }, { passive: true });
-
-// slow auto-advance while nobody has touched it; never with reduced motion, never off-screen
-let autoTimer = null, autoStopped = false, showVisible = false;
-function startAuto() { if (autoStopped || RM.matches || autoTimer || !showVisible) return; autoTimer = setInterval(() => { if (!document.hidden && !drag) step(1); }, 4200); }
-function pauseAuto() { clearInterval(autoTimer); autoTimer = null; }
-function stopAuto() { autoStopped = true; pauseAuto(); }
-new IntersectionObserver(es => { showVisible = es[0].isIntersecting; showVisible ? startAuto() : pauseAuto(); }, { threshold: 0.45 }).observe(show);
-show.addEventListener('mouseenter', pauseAuto);
-show.addEventListener('mouseleave', startAuto);
-show.addEventListener('focusin', pauseAuto);
-
-/* ---------------- Catalogue search ---------------- */
-let CAT = null, catPromise = null, catFailed = false, secFilter = -1, limit = 30;
-const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+/* ---------------- Catalogue: brand → category → item ---------------- */
+// tienda.json: b brands [[name, logo]] (the last one is «Otras marcas»), g photos [[file, exact]], i items [[name, section, sizes, price, from, brand, photo]]
+let CAT = null, BR = [], IMG = [], catPromise = null, catFailed = false;
+const cat = { brand: null, sec: -1, sort: 'az', limit: 24 };   // brand: null = not chosen yet, -1 = all brands
+const PAGE = 24;
+const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim();
 function ensureCatalog() {
   if (CAT) return Promise.resolve();
   if (!catPromise) {
-    catPromise = fetch('assets/data/catalogo.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(d => { CAT = d.map(([n, c, s, p, m]) => ({ n, c, s, p, m, f: norm(n + ' ' + s) })); CAT.sort((a, b) => a.n.localeCompare(b.n, 'es')); catFailed = false; })
+    catPromise = fetch('assets/data/tienda.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(d => {
+        BR = d.b.map(([n, logo], i) => ({ i, n, logo, count: 0, secs: new Map() }));
+        IMG = d.g;
+        CAT = d.i.map(([n, c, s, p, m, b, g]) => ({ n, c, s, p, m, b, g, k: norm(n) }));
+        CAT.sort((a, b) => a.n.localeCompare(b.n, 'es'));
+        CAT.forEach(it => { const B = BR[it.b]; B.count++; B.secs.set(it.c, (B.secs.get(it.c) || 0) + 1); });
+        catFailed = false;
+      })
       .catch(err => { catPromise = null; catFailed = true; throw err; });
   }
   return catPromise;
 }
-function renderSelect() {
-  const sel = $('#secSel');
-  sel.innerHTML = `<option value="-1">${t('cat.all')}</option>` + SECTIONS.map((s, i) => `<option value="${i}">${esc(lang === 'es' ? s[1] : s[2])}</option>`).join('') + `<option value="14">${OTHER[lang === 'es' ? 0 : 1]}</option>`;
-  sel.value = String(secFilter);
-}
+const OTHER_B = () => BR.length - 1;
+const brandName = i => i === OTHER_B() ? t('cat.otherBrands') : BR[i].n;
 function secName(c) { const s = SECTIONS[c]; return s ? (lang === 'es' ? s[1] : s[2]) : OTHER[lang === 'es' ? 0 : 1]; }
-function highlight(name, terms) {
-  const n = norm(name); const mark = new Array(name.length).fill(false);
-  terms.forEach(tm => { if (tm.length < 2) return; for (let i = n.indexOf(tm); i >= 0; i = n.indexOf(tm, i + tm.length)) mark.fill(true, i, i + tm.length); });
-  let out = '', on = false;
-  for (let i = 0; i < name.length; i++) { if (mark[i] !== on) { out += mark[i] ? '<mark>' : '</mark>'; on = mark[i]; } out += esc(name[i]); }
-  return on ? out + '</mark>' : out;
+// small brand mark: the logo on a light tile, or the name set in type when there is no logo
+function brandMark(i, cls) {
+  const B = BR[i];
+  if (i === OTHER_B()) return `<span class="${cls} gen" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9.5 20v-5.5h5V20"/></svg></span>`;
+  if (B.logo) return `<span class="${cls}" aria-hidden="true"><img src="assets/logos/${esc(B.logo)}" alt="" loading="lazy" decoding="async"></span>`;
+  // no logo file: the name set as a wordmark, sized to its length so it never breaks mid-word
+  return `<span class="${cls} type" style="--n:${Math.max(4, B.n.length)}" aria-hidden="true"><span>${esc(B.n)}</span></span>`;
+}
+// line drawing per section, for items without a photo
+const SEC_ICON = [
+  '<path d="M4 13h10a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M14 13.5l6.5-3"/>',
+  '<path d="M5 9h14v7a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><path d="M3 10h2M19 10h2M8 9V7h8v2M11 5h2"/>',
+  '<path d="M8 4h8l-1 6H9z"/><path d="M9 10l-2 9h10l-2-9"/><path d="M16 6h2"/>',
+  '<path d="M8 3h8l-1 8H9z"/><path d="M7 21h10l-1-6H8z"/><path d="M10 11v4M14 11v4"/>',
+  '<path d="M4 20 16 8c2-2 4-1 4 1L8 20z"/><path d="M14 10l2 2"/>',
+  '<path d="M12 3v10"/><path d="M9 3c0 3 1 5 3 5s3-2 3-5"/><path d="M11 13h2v8h-2z"/>',
+  '<path d="M4 12h16l-2 7H6z"/><path d="M7 12c0-3 2-5 5-5s5 2 5 5"/><path d="M12 4v3"/>',
+  '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/>',
+  '<path d="M8 3v6a2 2 0 0 1-2 2v10M6 3v5M10 3v5"/><path d="M17 3c-2 0-3 2-3 5s1 4 3 4v9"/>',
+  '<path d="M7 3h10c0 5-2 8-5 8s-5-3-5-8z"/><path d="M12 11v8M8 21h8"/>',
+  '<path d="M10 3h4v3l2 3v11a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9l2-3z"/><path d="M8 13h8"/>',
+  '<path d="M3 17h15l3-4c0-3-2-5-6-5H9c-2 0-4 2-6 9z"/><path d="M9 8V6"/>',
+  '<path d="M9 3h6v9H9z"/><path d="M8 12h8v9H8z"/><path d="M11 6h2"/>',
+  '<path d="M9 7h6v13a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z"/><path d="M10 7V4h4v3"/><path d="M9 12h6"/>',
+  '<path d="M4 8h16v11H4z"/><path d="M3 5h18v3H3z"/><path d="M10 12h4"/>'
+];
+const secIcon = c => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${SEC_ICON[c] || SEC_ICON[14]}</svg>`;
+function photoOf(it) { const g = IMG[it.g]; return g ? { src: 'assets/fotos/' + g[0], exact: !!g[1] } : null; }
+
+function renderSort() {
+  const sel = $('#sortSel');
+  sel.innerHTML = [['az', t('cat.sortAz')], ['pa', t('cat.sortPa')], ['pd', t('cat.sortPd')]].map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join('');
+  sel.value = cat.sort;
+}
+// mark the typed start of the name
+function highlight(name, q) {
+  if (!q) return esc(name);
+  let i = 0, k = 0;
+  while (i < name.length && k < q.length) {
+    const ch = norm(name[i]) || (name[i] === ' ' ? ' ' : '');
+    if (ch === ' ' && q[k] !== ' ') { i++; continue; }
+    k += ch.length; i++;
+  }
+  return `<mark>${esc(name.slice(0, i))}</mark>${esc(name.slice(i))}`;
+}
+function renderWall() {
+  const wall = $('#brandWall');
+  const show = cat.brand === null && !norm($('#q').value);
+  wall.hidden = !show || !CAT;
+  if (wall.hidden) return;
+  const tiles = BR.map(B => B.i).filter(i => i !== OTHER_B() && BR[i].count);
+  const tile = (i, name, n, mark) => `
+    <button type="button" class="btile" data-b="${i}" style="--d:${Math.min(tiles.length, 30)}">
+      ${mark}<span class="bt-tx"><span class="bt-nm">${esc(name)}</span><span class="bt-ct">${esc(n === 1 ? t('cat.items1') : t('cat.items', { n: fmtNum(n) }))}</span></span>
+      <span class="bt-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </button>`;
+  wall.innerHTML =
+    `<p class="bwall-h">${esc(t('cat.pickBrand'))}<small>${esc(t('cat.pickBrandSub', { n: fmtNum(tiles.length) }))}</small></p>` +
+    `<div class="bwall-grid">` +
+    tiles.map((i, k) => tile(i, BR[i].n, BR[i].count, brandMark(i, 'bt-logo')).replace('--d:', `--k:${Math.min(k, 18)};--d:`)).join('') +
+    tile(OTHER_B(), t('cat.otherBrands'), BR[OTHER_B()].count, brandMark(OTHER_B(), 'bt-logo')).replace('class="btile"', 'class="btile wide"') +
+    tile(-1, t('cat.allBrands'), CAT.length, `<span class="bt-logo gen" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></span>`).replace('class="btile"', 'class="btile wide"') +
+    `</div>`;
+}
+function renderBrandBar() {
+  const bar = $('#brandBar'), chips = $('#secChips');
+  const on = cat.brand !== null && !!CAT;
+  bar.hidden = !on; chips.hidden = !on;
+  $('#stepBrandVal').textContent = on ? (cat.brand < 0 ? t('cat.allBrands') : brandName(cat.brand)) : '';
+  $('#stepSecVal').textContent = on && cat.sec >= 0 ? secName(cat.sec) : '';
+  const steps = $('#steps'); steps.dataset.at = !on ? '1' : cat.sec < 0 ? '2' : '3';
+  if (!on) return;
+  const all = cat.brand < 0;
+  $('#bbLogo').outerHTML = all ? `<span class="bbar-logo gen" id="bbLogo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></span>` : brandMark(cat.brand, 'bbar-logo').replace('class="bbar-logo', 'id="bbLogo" class="bbar-logo');
+  $('#bbName').textContent = all ? t('cat.allBrands') : brandName(cat.brand);
+  const total = all ? CAT.length : BR[cat.brand].count;
+  $('#bbCount').textContent = total === 1 ? t('cat.items1') : t('cat.items', { n: fmtNum(total) });
+  // categories this brand actually has, biggest first
+  const secs = new Map();
+  if (all) CAT.forEach(it => secs.set(it.c, (secs.get(it.c) || 0) + 1)); else BR[cat.brand].secs.forEach((v, k) => secs.set(k, v));
+  const list = [...secs.entries()].sort((a, b) => a[0] - b[0]);
+  chips.innerHTML = `<span class="cchips-h">${esc(t('cat.pickSec'))}</span>` +
+    `<button type="button" class="cchip" data-sec="-1" aria-pressed="${cat.sec < 0}">${esc(t('cat.allSecs'))}<i>${fmtNum(total)}</i></button>` +
+    list.map(([c, n]) => `<button type="button" class="cchip" data-sec="${c}" aria-pressed="${cat.sec === c}"><span class="ci">${secIcon(c)}</span>${esc(secName(c))}<i>${fmtNum(n)}</i></button>`).join('');
+}
+function card(it, q, i) {
+  const ph = photoOf(it);
+  const brand = brandName(it.b);
+  const meta = [cat.sec < 0 ? secName(it.c) : '', it.s].filter(Boolean).join(' · ');
+  return `
+    <li class="pc" style="--k:${Math.min(i % PAGE, 12)}">
+      ${brandMark(it.b, 'pc-logo')}
+      <div class="pc-tx">
+        <span class="pc-br">${esc(brand)}</span>
+        <h4 class="pc-nm">${highlight(it.n, q)}</h4>
+        ${meta ? `<span class="pc-mt">${esc(meta)}</span>` : ''}
+        <span class="pc-pr">${it.m ? `<small>${esc(t('cat.from'))}</small>` : ''}<b>${fmtEur(it.p)}</b></span>
+      </div>
+      <button type="button" class="pc-ph${ph ? '' : ' none'}" data-zoom="${CAT.indexOf(it)}" aria-label="${esc(t('cat.zoom', { p: it.n }))}">
+        ${ph ? `<img src="${esc(ph.src)}" alt="" loading="lazy" decoding="async" draggable="false">${ph.exact ? '' : `<span class="pc-tag">${esc(t('cat.approx'))}</span>`}` : secIcon(it.c)}
+      </button>
+    </li>`;
 }
 function renderResults() {
-  const q = $('#q').value.trim();
+  const q = norm($('#q').value);
   const count = $('#count'), list = $('#results'), more = $('#moreResults');
-  const terms = norm(q).split(/\s+/).filter(Boolean);
-  if (!terms.some(x => x.length >= 2) && secFilter < 0) {
-    count.textContent = t('cat.hint');
-    list.innerHTML = `<li class="sugg">${T[lang].sugg.map(s => `<button type="button" class="chip" data-q="${esc(s)}">${esc(s)}</button>`).join('')}</li>`;
-    more.hidden = true; return;
-  }
   if (!CAT) {
+    renderWall(); renderBrandBar();
     count.textContent = catFailed ? t('cat.error') : t('cat.loading'); list.innerHTML = ''; more.hidden = true;
     if (!catFailed) ensureCatalog().then(renderResults).catch(() => { count.textContent = t('cat.error'); });
     return;
   }
-  let r = CAT.filter(it => (secFilter < 0 || it.c === secFilter) && terms.every(w => it.f.includes(w)));
-  if (terms[0]) r = r.slice().sort((a, b) => norm(b.n).startsWith(terms[0]) - norm(a.n).startsWith(terms[0]));
-  if (!r.length) { count.textContent = ''; list.innerHTML = `<li class="empty" style="display:block">${esc(t('cat.none', { q }))}</li>`; more.hidden = true; return; }
-  count.textContent = r.length === 1 ? t('cat.count1') : t('cat.count', { n: fmtNum(r.length) });
-  list.innerHTML = r.slice(0, limit).map((it, i) => `
-    <li style="animation-delay:${Math.min(i, 12) * 25}ms">
-      <span class="nm">${highlight(it.n, terms)}</span>
-      <span class="mt">${esc([secName(it.c), it.s].filter(Boolean).join(' · '))}</span>
-      <span class="pr">${it.m ? `<small>${t('cat.from')}</small>` : ''}${fmtEur(it.p)}</span>
-    </li>`).join('');
-  more.hidden = r.length <= limit;
+  renderWall(); renderBrandBar();
+  if (cat.brand === null && !q) { count.textContent = ''; list.innerHTML = ''; more.hidden = true; return; }
+  // only names that START with what was typed
+  let r = CAT.filter(it => (cat.brand === null || cat.brand < 0 || it.b === cat.brand) && (cat.sec < 0 || it.c === cat.sec) && (!q || it.k.startsWith(q)));
+  if (cat.sort === 'pa') r = r.slice().sort((a, b) => a.p - b.p);
+  else if (cat.sort === 'pd') r = r.slice().sort((a, b) => b.p - a.p);
+  if (!r.length) {
+    count.textContent = '';
+    list.innerHTML = `<li class="empty">${esc(q ? t('cat.none', { q: $('#q').value.trim() }) : t('cat.noneHere'))}</li>`;
+    more.hidden = true; return;
+  }
+  const where = cat.brand === null || cat.brand < 0 ? '' : ' · ' + brandName(cat.brand);
+  count.textContent = (r.length === 1 ? t('cat.count1') : t('cat.count', { n: fmtNum(r.length) })) + (q ? ' ' + t('cat.startWith', { q: $('#q').value.trim() }) : '') + where;
+  list.innerHTML = r.slice(0, cat.limit).map((it, i) => card(it, q, i)).join('');
+  more.hidden = r.length <= cat.limit;
+  if (!more.hidden) more.textContent = t('cat.moreN', { n: fmtNum(Math.min(PAGE, r.length - cat.limit)) });
 }
+function chooseBrand(i) { cat.brand = i; cat.sec = -1; cat.limit = PAGE; renderResults(); }
 let qTimer = 0;
-$('#q').addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(() => { limit = 30; renderResults(); }, 140); });
+$('#q').addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(() => { cat.limit = PAGE; renderResults(); }, 120); });
 $('#q').addEventListener('focus', () => { ensureCatalog().catch(() => {}); }, { once: true });
-$('#secSel').addEventListener('change', e => { secFilter = +e.target.value; limit = 30; renderResults(); });
-$('#moreResults').addEventListener('click', () => { limit += 30; renderResults(); });
-$('#results').addEventListener('click', e => {
-  const b = e.target.closest('[data-q]'); if (!b) return;
-  $('#q').value = b.dataset.q; limit = 30; renderResults(); $('#q').focus({ preventScroll: true });
+$('#sortSel').addEventListener('change', e => { cat.sort = e.target.value; cat.limit = PAGE; renderResults(); });
+$('#moreResults').addEventListener('click', () => { cat.limit += PAGE; renderResults(); });
+$('#brandWall').addEventListener('click', e => {
+  const b = e.target.closest('[data-b]'); if (!b) return;
+  chooseBrand(+b.dataset.b);
+  const bar = $('#brandBar');
+  if (bar.getBoundingClientRect().top < 80) bar.scrollIntoView({ behavior: RM.matches ? 'auto' : 'smooth', block: 'center' });
+  $('#secChips .cchip').focus({ preventScroll: true });
 });
-new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { ensureCatalog().then(fillTicker).catch(() => {}); o.disconnect(); } }, { rootMargin: '600px' }).observe($('#catalogo'));
+$('#secChips').addEventListener('click', e => {
+  const b = e.target.closest('[data-sec]'); if (!b) return;
+  cat.sec = +b.dataset.sec; cat.limit = PAGE; renderResults();
+});
+const backToBrands = () => { cat.brand = null; cat.sec = -1; cat.limit = PAGE; $('#q').value = ''; renderResults(); $('#steps').scrollIntoView({ behavior: RM.matches ? 'auto' : 'smooth', block: 'start' }); };
+$('#bbChange').addEventListener('click', backToBrands);
+$('#stepBrand').addEventListener('click', backToBrands);
+new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { ensureCatalog().then(() => { renderResults(); fillTicker(); }).catch(() => { renderResults(); }); o.disconnect(); } }, { rootMargin: '600px' }).observe($('#catalogo'));
+
+// the enlarged photo: hover grows it in place (CSS); a click or tap opens it full size with the price
+const zoom = $('#zoom');
+let zoomOpener = null;
+function openZoom(btn) {
+  const it = CAT[+btn.dataset.zoom]; if (!it) return;
+  zoomOpener = btn;
+  const ph = photoOf(it);
+  $('#zoomPh').innerHTML = ph ? `<img src="${esc(ph.src)}" alt="${esc(it.n)}">` : `<span class="zoom-ic">${secIcon(it.c)}</span>`;
+  $('#zoomPh').classList.toggle('none', !ph);
+  $('#zoomBrand').textContent = brandName(it.b);
+  $('#zoomName').textContent = it.n;
+  $('#zoomPrice').innerHTML = (it.m ? `<small>${esc(t('cat.from'))}</small>` : '') + `<b>${fmtEur(it.p)}</b>` + (it.s ? `<span>${esc(it.s)}</span>` : '');
+  $('#zoomNote').textContent = !ph ? t('cat.noPhoto') : ph.exact ? '' : t('cat.approxLong');
+  const who = [it.b === OTHER_B() ? '' : brandName(it.b), it.n].filter(Boolean).join(' ');
+  $('#zoomAsk').href = 'https://wa.me/34956512987?text=' + encodeURIComponent(t('cat.waMsg', { p: who }));
+  zoom.hidden = false;
+  document.documentElement.classList.add('lb-open');
+  requestAnimationFrame(() => zoom.classList.add('show'));
+  $('#zoomClose').focus();
+}
+function closeZoom() {
+  if (zoom.hidden) return;
+  zoom.classList.remove('show');
+  document.documentElement.classList.remove('lb-open');
+  setTimeout(() => { zoom.hidden = true; }, RM.matches ? 0 : 300);
+  if (zoomOpener) zoomOpener.focus({ preventScroll: true });
+}
+$('#results').addEventListener('click', e => { const b = e.target.closest('[data-zoom]'); if (b) openZoom(b); });
+$('#zoomClose').addEventListener('click', closeZoom);
+zoom.addEventListener('click', e => { if (e.target === zoom) closeZoom(); });
+document.addEventListener('keydown', e => {
+  if (zoom.hidden) return;
+  if (e.key === 'Escape') closeZoom();
+  if (e.key === 'Tab') {
+    const f = [$('#zoomClose'), $('#zoomAsk')];
+    if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[1].focus(); }
+    else if (!e.shiftKey && document.activeElement === f[1]) { e.preventDefault(); f[0].focus(); }
+  }
+});
+// hovering a photo enlarges it; keep it inside the window by growing toward the free side
+$('#results').addEventListener('pointerover', e => {
+  const b = e.target.closest('.pc-ph'); if (!b || e.pointerType !== 'mouse') return;
+  const r = b.getBoundingClientRect();
+  b.classList.toggle('up', r.top > innerHeight * 0.55);
+});
 
 /* Decorative life around the search: drifting item names, a typing hint, motion only while on screen */
 const consoleEl = $('.console');

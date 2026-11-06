@@ -1,0 +1,1317 @@
+{
+ "logos": {
+  "Le Creuset": "le-creuset.svg",
+  "Krups": "krups.svg",
+  "Bialetti": "bialetti.png"
+ },
+ "reglas": [
+  [
+   "Bialetti",
+   "^brikka$",
+   "p-bia-brikka.webp",
+   1
+  ],
+  [
+   "Bialetti",
+   "^moka express",
+   "p-bia-express.webp",
+   0
+  ],
+  [
+   "*",
+   "^new moka induccion",
+   "p-bia-induction.webp",
+   0
+  ],
+  [
+   "Kuhn Rikon",
+   "^duromatic supreme$",
+   "p-kr-duromatic.webp",
+   1
+  ],
+  [
+   "Kuhn Rikon",
+   "^duromatic",
+   "p-kr-duromatic.webp",
+   0
+  ],
+  [
+   "Rowenta",
+   "^xforce flex$",
+   "p-rowenta-xforce.webp",
+   1
+  ],
+  [
+   "Braun",
+   "^braun series 9 pro\\+$",
+   "p-braun-s9.webp",
+   1
+  ],
+  [
+   "Braun",
+   "^braun s9 pro\\+$",
+   "p-braun-s9.webp",
+   0
+  ],
+  [
+   "Tefal",
+   "^optigrill initial$",
+   "p-tefal-optigrill.webp",
+   1
+  ],
+  [
+   "Tefal",
+   "^optigrill",
+   "p-tefal-optigrill.webp",
+   0
+  ],
+  [
+   "Moulinex",
+   "^moulinex easy fry & grill$",
+   "p-mx-easyfry.webp",
+   1
+  ],
+  [
+   "Brita",
+   "^jarra brita marella$",
+   "p-brita-marella.webp",
+   1
+  ],
+  [
+   "Brita",
+   "marella",
+   "p-brita-marella.webp",
+   0
+  ],
+  [
+   "Lékué",
+   "^omelette rojo$",
+   "p-lk-omelette.webp",
+   1
+  ],
+  [
+   "Lékué",
+   "^molde tortilla$",
+   "p-lk-tortilla.webp",
+   1
+  ],
+  [
+   "Lékué",
+   "^kit kefir y yogurt$",
+   "p-lk-kefir.webp",
+   1
+  ],
+  [
+   "Lékué",
+   "^veggie burger verde$",
+   "p-lk-veggieburger.webp",
+   1
+  ],
+  [
+   "Lékué",
+   "^kit veggie burger$",
+   "p-lk-veggieburger.webp",
+   0
+  ],
+  [
+   "Lékué",
+   "^pan de molde$",
+   "p-lk-panmolde.webp",
+   0
+  ],
+  [
+   "Tefal",
+   "^(sarten|grill|plancha|wok|paellera) aroma$",
+   "p-tefal-aroma.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(cocotte calabaza|cac baja calab|cacerola calab)).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-calabaza-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(cocotte calabaza|cac baja calab|cacerola calab)).*(?:nectar)",
+   "lc-calabaza-nectar.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(cocotte calabaza|cac baja calab|cacerola calab)).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-calabaza-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(cocotte calabaza|cac baja calab|cacerola calab)).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-calabaza-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(cocotte calabaza|cac baja calab|cacerola calab)",
+   "lc-calabaza.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:cereza)",
+   "lc-mini-cocotte-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-mini-cocotte-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:azure)",
+   "lc-mini-cocotte-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:merengue)",
+   "lc-mini-cocotte-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:shell pink|\\bs pink\\b)",
+   "lc-mini-cocotte-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:thyme?\\b|\\bthym)",
+   "lc-mini-cocotte-thyme.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:garnet)",
+   "lc-mini-cocotte-garnet.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:sea salt)",
+   "lc-mini-cocotte-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:riviera)",
+   "lc-mini-cocotte-bleuriviera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-mini-cocotte-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mini cocotte).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-mini-cocotte-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^mini cocotte",
+   "lc-mini-cocotte.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte oval).*(?:cereza)",
+   "lc-cocotte-oval-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte oval).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-cocotte-oval-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte oval).*(?:azure)",
+   "lc-cocotte-oval-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte oval).*(?:merengue)",
+   "lc-cocotte-oval-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte oval).*(?:shell pink|\\bs pink\\b)",
+   "lc-cocotte-oval-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte oval).*(?:thyme?\\b|\\bthym)",
+   "lc-cocotte-oval-thyme.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte oval).*(?:flint)",
+   "lc-cocotte-oval-flint.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte oval).*(?:bamboo)",
+   "lc-cocotte-oval-bamboogreen.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte oval).*(?:sea salt)",
+   "lc-cocotte-oval-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte oval).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-cocotte-oval-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^cocotte oval",
+   "lc-cocotte-oval.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(cocotte baja|cocotte bj|cacerola baja|cac baja)).*(?:merengue)",
+   "lc-cacerola-baja-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(cocotte baja|cocotte bj|cacerola baja|cac baja)).*(?:bamboo)",
+   "lc-cacerola-baja-bamboogreen.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(cocotte baja|cocotte bj|cacerola baja|cac baja)).*(?:riviera)",
+   "lc-cacerola-baja-bleuriviera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(cocotte baja|cocotte bj|cacerola baja|cac baja)).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-cacerola-baja-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(cocotte baja|cocotte bj|cacerola baja|cac baja)",
+   "lc-cacerola-baja.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:marmita).*(?:cereza)",
+   "lc-marmita-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^marmita",
+   "lc-marmita.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:cereza)",
+   "lc-cocotte-redonda-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-cocotte-redonda-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:azure)",
+   "lc-cocotte-redonda-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:merengue)",
+   "lc-cocotte-redonda-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:shell pink|\\bs pink\\b)",
+   "lc-cocotte-redonda-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:garnet)",
+   "lc-cocotte-redonda-garnet.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:mist grey)",
+   "lc-cocotte-redonda-mistgrey.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:flint)",
+   "lc-cocotte-redonda-flint.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:bamboo)",
+   "lc-cocotte-redonda-bamboogreen.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:sea salt)",
+   "lc-cocotte-redonda-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:riviera)",
+   "lc-cocotte-redonda-bleuriviera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cocotte).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-cocotte-redonda-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^cocotte",
+   "lc-cocotte-redonda.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(skillet grill|parrilla|grill)).*(?:cereza)",
+   "lc-parrilla-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(skillet grill|parrilla|grill)).*(?:merengue)",
+   "lc-parrilla-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(skillet grill|parrilla|grill)).*(?:riviera)",
+   "lc-parrilla-bleuriviera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(skillet grill|parrilla|grill)).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-parrilla-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(skillet grill|parrilla|grill)",
+   "lc-parrilla.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:skillet).*(?:cereza)",
+   "lc-skillet-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:skillet).*(?:azure)",
+   "lc-skillet-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:skillet).*(?:merengue)",
+   "lc-skillet-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:skillet).*(?:shell pink|\\bs pink\\b)",
+   "lc-skillet-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:skillet).*(?:thyme?\\b|\\bthym)",
+   "lc-skillet-thyme.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:skillet).*(?:sea salt)",
+   "lc-skillet-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:skillet).*(?:riviera)",
+   "lc-skillet-bleuriviera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:skillet).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-skillet-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^skillet",
+   "lc-skillet.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(tetera kone|hervidor kone|hervidor|pava)).*(?:sea salt)",
+   "lc-kone-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(tetera kone|hervidor kone|hervidor|pava)).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-kone-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(tetera kone|hervidor kone|hervidor|pava)",
+   "lc-kone.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:tetera).*(?:merengue)",
+   "lc-tetera-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:tetera).*(?:shell pink|\\bs pink\\b)",
+   "lc-tetera-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:tetera).*(?:sea salt)",
+   "lc-tetera-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:tetera).*(?:riviera)",
+   "lc-tetera-bleuriviera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:tetera).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-tetera-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^tetera",
+   "lc-tetera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cafetera).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-cafetera-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^cafetera",
+   "lc-cafetera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:taza viaje).*(?:azure)",
+   "lc-taza-termo-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:taza viaje).*(?:shell pink|\\bs pink\\b)",
+   "lc-taza-termo-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:taza viaje).*(?:deep teal)",
+   "lc-taza-termo-deepteal.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:taza viaje).*(?:sea salt)",
+   "lc-taza-termo-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:taza viaje).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-taza-termo-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^taza viaje",
+   "lc-taza-termo.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(taza|mug)).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-taza-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(taza|mug)).*(?:merengue)",
+   "lc-taza-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(taza|mug)).*(?:thyme?\\b|\\bthym)",
+   "lc-taza-thyme.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(taza|mug)).*(?:riviera)",
+   "lc-taza-bleuriviera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(taza|mug)).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-taza-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(taza|mug)).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-taza-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(taza|mug)",
+   "lc-taza.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato hondo).*(?:cereza)",
+   "lc-plato-hondo-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato hondo).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-plato-hondo-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato hondo).*(?:merengue)",
+   "lc-plato-hondo-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato hondo).*(?:nectar)",
+   "lc-plato-hondo-nectar.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato hondo).*(?:garnet)",
+   "lc-plato-hondo-garnet.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato hondo).*(?:bamboo)",
+   "lc-plato-hondo-bamboogreen.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato hondo).*(?:sea salt)",
+   "lc-plato-hondo-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^plato hondo",
+   "lc-plato-hondo.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato).*(?:merengue)",
+   "lc-plato-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato).*(?:nectar)",
+   "lc-plato-nectar.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato).*(?:garnet)",
+   "lc-plato-garnet.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato).*(?:bamboo)",
+   "lc-plato-bamboogreen.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato).*(?:sea salt)",
+   "lc-plato-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-plato-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:plato).*(?:\\bink\\b)",
+   "lc-plato-ink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^plato",
+   "lc-plato.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bol).*(?:merengue)",
+   "lc-bol-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bol).*(?:nectar)",
+   "lc-bol-nectar.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bol).*(?:garnet)",
+   "lc-bol-garnet.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bol).*(?:bamboo)",
+   "lc-bol-bamboogreen.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bol).*(?:sea salt)",
+   "lc-bol-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bol).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-bol-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^bol",
+   "lc-bol.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cuenco).*(?:merengue)",
+   "lc-cuenco-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cuenco).*(?:thyme?\\b|\\bthym)",
+   "lc-cuenco-thyme.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cuenco).*(?:garnet)",
+   "lc-cuenco-garnet.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cuenco).*(?:marseille|marsella)",
+   "lc-cuenco-marseille.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:cuenco).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-cuenco-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^cuenco",
+   "lc-cuenco.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja (oval|ov)).*(?:cereza)",
+   "lc-bandeja-oval-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^bandeja (oval|ov)",
+   "lc-bandeja-oval.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja cuadrada).*(?:cereza)",
+   "lc-bandeja-cuadrada-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja cuadrada).*(?:shell pink|\\bs pink\\b)",
+   "lc-bandeja-cuadrada-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^bandeja cuadrada",
+   "lc-bandeja-cuadrada.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:cereza)",
+   "lc-bandeja-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-bandeja-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:azure)",
+   "lc-bandeja-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:merengue)",
+   "lc-bandeja-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:shell pink|\\bs pink\\b)",
+   "lc-bandeja-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:thyme?\\b|\\bthym)",
+   "lc-bandeja-thyme.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:mist grey)",
+   "lc-bandeja-mistgrey.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:sea salt)",
+   "lc-bandeja-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:riviera)",
+   "lc-bandeja-bleuriviera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-bandeja-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bandeja).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-bandeja-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^bandeja",
+   "lc-bandeja.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bote).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-bote-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bote).*(?:nectar)",
+   "lc-bote-nectar.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bote).*(?:deep teal)",
+   "lc-bote-deepteal.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bote).*(?:bamboo)",
+   "lc-bote-bamboogreen.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:bote).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-bote-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^bote",
+   "lc-bote.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:botella).*(?:azure)",
+   "lc-botella-termica-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:botella).*(?:shell pink|\\bs pink\\b)",
+   "lc-botella-termica-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:botella).*(?:deep teal)",
+   "lc-botella-termica-deepteal.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:botella).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-botella-termica-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^botella",
+   "lc-botella-termica.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(molinillo|molinillos|mini molinillo|set mini molinillo)).*(?:cereza)",
+   "lc-molinillo-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(molinillo|molinillos|mini molinillo|set mini molinillo)).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-molinillo-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(molinillo|molinillos|mini molinillo|set mini molinillo)).*(?:azure)",
+   "lc-molinillo-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(molinillo|molinillos|mini molinillo|set mini molinillo)).*(?:merengue)",
+   "lc-molinillo-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(molinillo|molinillos|mini molinillo|set mini molinillo)).*(?:shell pink|\\bs pink\\b)",
+   "lc-molinillo-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(molinillo|molinillos|mini molinillo|set mini molinillo)).*(?:garnet)",
+   "lc-molinillo-garnet.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(molinillo|molinillos|mini molinillo|set mini molinillo)).*(?:sea salt)",
+   "lc-molinillo-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:(molinillo|molinillos|mini molinillo|set mini molinillo)).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-molinillo-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(molinillo|molinillos|mini molinillo|set mini molinillo)",
+   "lc-molinillo.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:espatula).*(?:cereza)",
+   "lc-espatula-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^espatula",
+   "lc-espatula.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^jarra",
+   "lc-jarra.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^lechera",
+   "lc-lechera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:salsera).*(?:cereza)",
+   "lc-salsera-cerise.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^salsera",
+   "lc-salsera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^salvamantel",
+   "lc-salvamanteles.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^aceitera",
+   "lc-aceitera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mortero).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-mortero-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:mortero).*(?:azure)",
+   "lc-mortero-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^mortero",
+   "lc-mortero.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:reposa).*(?:azure)",
+   "lc-reposa-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:reposa).*(?:thyme?\\b|\\bthym)",
+   "lc-reposa-thyme.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:reposa).*(?:garnet)",
+   "lc-reposa-garnet.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:reposa).*(?:riviera)",
+   "lc-reposa-bleuriviera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^reposa",
+   "lc-reposa.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:funda enfriadora).*(?:azure)",
+   "lc-funda-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:funda enfriadora).*(?:merengue)",
+   "lc-funda-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:funda enfriadora).*(?:shell pink|\\bs pink\\b)",
+   "lc-funda-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:funda enfriadora).*(?:burgundy)",
+   "lc-funda-burgundy.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:funda enfriadora).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-funda-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^funda enfriadora",
+   "lc-funda.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:abridor palanca).*(?:volcanico|volvanico|\\bvolc\\b)",
+   "lc-sacacorchos-volcanic.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:abridor palanca).*(?:\\bnegr[oa]\\b|\\bblack\\b|\\bn mate\\b)",
+   "lc-sacacorchos-satinblack.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^abridor palanca",
+   "lc-sacacorchos.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^fondue",
+   "lc-fondue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:molde tarta).*(?:azure)",
+   "lc-molde-tarta-azure.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:molde tarta).*(?:merengue)",
+   "lc-molde-tarta-meringue.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:molde tarta).*(?:shell pink|\\bs pink\\b)",
+   "lc-molde-tarta-shellpink.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:molde tarta).*(?:garnet)",
+   "lc-molde-tarta-garnet.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:molde tarta).*(?:sea salt)",
+   "lc-molde-tarta-seasalt.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:molde tarta).*(?:riviera)",
+   "lc-molde-tarta-bleuriviera.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(?:molde tarta).*(?:\\bwhite\\b|\\bblanc[oa]\\b)",
+   "lc-molde-tarta-white.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^molde tarta",
+   "lc-molde-tarta.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^delantal",
+   "lc-delantal.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(guante|agarrador)",
+   "lc-manopla.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^tabla",
+   "lc-tabla.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^terrina",
+   "lc-terrina.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(cuchara|cucharon|rasera)",
+   "lc-cuchara.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^cocotte calabaza",
+   "p-lc-calabaza.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(cocotte|marmita)",
+   "p-lc-cocottes.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(hervidor|tetera) kone",
+   "p-lc-hervidor.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^cuenco",
+   "p-lc-cuencos.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^botella",
+   "p-lc-botella.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^taza viaje",
+   "p-lc-travelmug.webp",
+   0
+  ],
+  [
+   "Le Creuset",
+   "^(jarra|bandeja mantequilla|mantequera)",
+   "p-lc-gres.webp",
+   0
+  ]
+ ]
+}

@@ -27,7 +27,6 @@
   <ul class="nav-links">
     <li><a href="#tienda" data-i18n="nav.shop">Tienda</a></li>
     <li><a href="#secciones" data-i18n="nav.sections">Secciones</a></li>
-    <li><a href="#marcas" data-i18n="nav.brands">Marcas</a></li>
     <li><a href="#catalogo" data-i18n="nav.catalogue">Catálogo</a></li>
     <li><a href="#prensa" data-i18n="nav.press">Prensa</a></li>
     <li><a href="#visita" data-i18n="nav.visit">Visítanos</a></li>
@@ -156,45 +155,16 @@
     </div>
   </section>
 
-  <!-- 03 Brands -->
-  <section class="s brands" id="marcas">
-    <div class="gap-mq" aria-hidden="true"><div class="gap-row" id="mqBrands"></div></div>
-    <div class="wrap io">
-      <p class="eyebrow reveal"><b>03</b><span data-i18n="br.eyebrow">Marcas</span></p>
-      <svg class="strip" viewBox="0 0 320 2" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1H319" pathLength="1"/></svg>
-      <h2 class="t reveal" data-i18n="br.title">Marcas que conoces, en tu barrio.</h2>
-      <p class="lede reveal" data-i18n="br.lede">Le Creuset, Kuhn Rikon, Bialetti, Lékué, Braun y más. Estos son algunos de los productos que puedes ver y tocar en la tienda.</p>
-      <div class="chips" id="chips" role="group" aria-label="Filtrar por marca" data-i18n-aria="br.filter"></div>
-      <div class="show" id="show" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Escaparate de productos" data-i18n-aria="br.region">
-        <div class="show-stage" id="showStage"></div>
-        <button type="button" class="show-nav prev" data-step="-1" aria-label="Anterior" data-i18n-aria="prev"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-        <button type="button" class="show-nav next" data-step="1" aria-label="Siguiente" data-i18n-aria="next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-      </div>
-      <div class="show-info">
-        <div class="txt" aria-live="polite">
-          <div class="br" id="siBrand"></div>
-          <h3 class="pn" id="siName"></h3>
-        </div>
-        <a class="btn btn-ghost" id="siAsk" href="https://wa.me/34956512987" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg><span data-i18n="br.askWa">Pregúntanos por WhatsApp</span></a>
-      </div>
-      <div class="show-foot" aria-hidden="true">
-        <span class="show-count" id="siCount">01 / 51</span>
-        <span class="show-bar"><i id="siBar"></i></span>
-        <span class="show-hint" data-i18n="br.hint">Arrastra o usa las flechas</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 Catalogue -->
+  <!-- 03 Catalogue -->
   <section class="s" id="catalogo">
     <div class="gap-mq rev" aria-hidden="true"><div class="gap-row" id="mqCat"></div></div>
     <div class="wrap io">
       <div class="cat-head">
         <div>
-          <p class="eyebrow reveal"><b>04</b><span data-i18n="cat.eyebrow">Catálogo</span></p>
+          <p class="eyebrow reveal"><b>03</b><span data-i18n="cat.eyebrow">Catálogo</span></p>
           <svg class="strip" viewBox="0 0 320 2" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1H319" pathLength="1"/></svg>
           <h2 class="t reveal" data-i18n="cat.title">Busca un artículo.</h2>
-          <p class="lede reveal" data-i18n="cat.lede">Busca por nombre o elige una sección y mira el precio antes de venir.</p>
+          <p class="lede reveal" data-i18n="cat.lede">Elige una marca, después la categoría, y mira el precio antes de venir.</p>
         </div>
         <dl class="cat-stats reveal">
           <div class="stat"><dt data-count="7202">7.202</dt><dd data-i18n="cat.s1">artículos con precio</dd></div>
@@ -202,62 +172,55 @@
         </dl>
       </div>
 
-      <!-- the shop counter: a search console with living light around it -->
-      <div class="console reveal">
+      <!-- the shop counter: pick a brand, then a category, or just type the start of a name -->
+      <div class="console reveal" id="catConsole">
         <div class="ticker" aria-hidden="true"><div class="tk-row" id="tk1"></div></div>
         <form class="search" role="search" onsubmit="return false">
           <label for="q" data-i18n="cat.label">Buscar</label>
           <div class="search-field">
-            <input id="q" type="search" autocomplete="off" placeholder="Sartén 28, cafetera, termo…" data-i18n-ph="cat.ph">
+            <input id="q" type="search" autocomplete="off" placeholder="Sartén, cafetera, termo…" data-i18n-ph="cat.ph" aria-describedby="qHelp">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
           </div>
           <div class="select">
-            <label for="secSel" data-i18n="cat.section">Sección</label>
-            <select id="secSel"></select>
+            <label for="sortSel" data-i18n="cat.sort">Ordenar</label>
+            <select id="sortSel"></select>
           </div>
+          <p class="q-help" id="qHelp" data-i18n="cat.qhelp">Busca por el principio del nombre: «ca» encuentra cafeteras, cazos y cacerolas.</p>
         </form>
         <div class="ticker" aria-hidden="true"><div class="tk-row rev" id="tk2"></div></div>
+
+        <ol class="steps" id="steps" aria-label="Pasos" data-i18n-aria="cat.steps">
+          <li data-step="1"><button type="button" id="stepBrand"><b>1</b><span data-i18n="cat.step1">Marca</span><em id="stepBrandVal"></em></button></li>
+          <li data-step="2"><span class="st"><b>2</b><span data-i18n="cat.step2">Categoría</span><em id="stepSecVal"></em></span></li>
+          <li data-step="3"><span class="st"><b>3</b><span data-i18n="cat.step3">Artículo y precio</span></span></li>
+        </ol>
+
+        <div class="bwall" id="brandWall" role="group" aria-label="Elige una marca" data-i18n-aria="cat.pickBrand"></div>
+
+        <div class="bbar" id="brandBar" hidden>
+          <span class="bbar-logo" id="bbLogo" aria-hidden="true"></span>
+          <span class="bbar-tx"><b id="bbName"></b><small id="bbCount"></small></span>
+          <button type="button" class="btn btn-ghost bbar-change" id="bbChange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span data-i18n="cat.change">Cambiar marca</span></button>
+        </div>
+        <div class="cchips" id="secChips" role="group" aria-label="Elige una categoría" data-i18n-aria="cat.pickSec" hidden></div>
+
         <p class="count" id="count" aria-live="polite"></p>
-        <ul class="results" id="results"></ul>
-        <div class="more"><button type="button" class="btn btn-ghost" id="moreResults" hidden data-i18n="cat.more">Ver más resultados</button></div>
+        <ul class="pgrid" id="results"></ul>
+        <div class="more"><button type="button" class="btn btn-ghost" id="moreResults" hidden data-i18n="cat.more">Ver más artículos</button></div>
         <p class="note" data-i18n="cat.note">Los precios son los de la tienda y pueden cambiar. Llama o escribe por WhatsApp para confirmar que lo tenemos.</p>
       </div>
     </div>
   </section>
 
-  <!-- 05 Press -->
+  <!-- 04 Press -->
   <section class="s" id="prensa">
     <div class="gap-mq" aria-hidden="true"><div class="gap-row" id="mqPress"></div></div>
     <div class="wrap io">
-      <p class="eyebrow reveal"><b>05</b><span data-i18n="pr.eyebrow">Prensa</span></p>
+      <p class="eyebrow reveal"><b>04</b><span data-i18n="pr.eyebrow">Prensa</span></p>
       <svg class="strip" viewBox="0 0 320 2" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1H319" pathLength="1"/></svg>
       <h2 class="t reveal" data-i18n="pr.title">Nos han visitado.</h2>
       <p class="lede reveal" data-i18n="pr.lede">El Faro de Ceuta y Radio Televisión Ceuta vinieron a conocernos.</p>
-      <div class="press-grid">
-        <div class="vid feat reveal">
-          <button type="button" data-embed="https://www.youtube-nocookie.com/embed/H-ApoLRAZiU?autoplay=1&amp;rel=0&amp;playsinline=1" data-url="https://www.youtube.com/watch?v=H-ApoLRAZiU" data-from="YouTube" data-ratio="16/9" data-title="El Faro de Ceuta · FaroTV · «Casa &amp; Cocina», todo lo del hogar a mano">
-            <img class="cover" src="assets/prensa-faro.jpg" alt="" width="1100" height="619" loading="lazy" decoding="async">
-            <span class="who">
-              <svg class="faro" viewBox="0 0 40 52" aria-hidden="true">
-                <defs><linearGradient id="beamG" x1="0" x2="1"><stop offset="0" stop-color="#fff6e8" stop-opacity="1"/><stop offset=".6" stop-color="#ffd4a0" stop-opacity=".35"/><stop offset="1" stop-color="#ffd4a0" stop-opacity="0"/></linearGradient></defs>
-                <g class="beam"><path d="M20 12 L62 2 L62 22 Z" fill="url(#beamG)"/><path d="M20 12 L-22 2 L-22 22 Z" fill="url(#beamG)" transform="scale(-1 1) translate(-40 0)" opacity=".55"/></g>
-                <path d="M15 9.5h10M16 9.5l4-5 4 5" fill="none" stroke="#fff1dc" stroke-width="1.4" stroke-linejoin="round"/>
-                <circle cx="20" cy="12.5" r="2.6" fill="#fff1dc"/>
-                <path d="M15.5 16h9l3 32h-15z" fill="none" stroke="#fff1dc" stroke-width="1.4" stroke-linejoin="round"/>
-                <path d="M14.6 26h10.8M13.7 36h12.6" stroke="#d08a52" stroke-width="2.2"/>
-                <path d="M9 48h22" stroke="#fff1dc" stroke-width="1.4" stroke-linecap="round"/>
-              </svg>
-              <span class="who-t"><b>El Faro de Ceuta</b><small>FaroTV</small></span>
-            </span>
-            <span class="vt">
-              <span class="kick" data-i18n="pr.kick">Reportaje</span>
-              <span class="ttl">«Casa &amp; Cocina», todo lo del hogar a mano</span>
-              <span class="fine" data-i18n="pr.yt">Al pulsar se carga el vídeo desde YouTube.</span>
-            </span>
-            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
-            <span class="sr-only" data-i18n="pr.play">Reproducir vídeo</span>
-          </button>
-        </div>
+      <div class="press-grid solo">
         <div class="vid reveal">
           <button type="button" data-embed="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D1267470963417439&amp;show_text=false&amp;autoplay=true&amp;width=1280" data-url="https://www.facebook.com/watch/?v=1267470963417439" data-from="Facebook" data-ratio="16/9" data-title="Radio Televisión Ceuta · Casa &amp; Cocina">
             <img class="cover" src="assets/prensa-rtvce.jpg" alt="" width="1000" height="563" loading="lazy" decoding="async">
@@ -272,14 +235,47 @@
           </button>
         </div>
       </div>
+
+      <!-- El Faro de Ceuta: no photo of the report on our page, just a lighthouse that links out to it -->
+      <a class="faro-cta reveal" href="https://www.youtube.com/watch?v=H-ApoLRAZiU" target="_blank" rel="noopener" aria-label="Ver el reportaje de El Faro de Ceuta en YouTube (se abre en una pestaña nueva)" data-i18n-aria="pr.faroAria">
+        <span class="fc-sea" aria-hidden="true"><i></i><i></i></span>
+        <svg class="fc-faro" viewBox="0 0 120 200" aria-hidden="true">
+          <defs>
+            <linearGradient id="fcBeam" x1="0" x2="1"><stop offset="0" stop-color="#fff6e8" stop-opacity=".9"/><stop offset=".22" stop-color="#ffd4a0" stop-opacity=".3"/><stop offset=".55" stop-color="#ffd4a0" stop-opacity="0"/></linearGradient>
+            <radialGradient id="fcLamp"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#fff1dc"/><stop offset="1" stop-color="#ffd4a0" stop-opacity="0"/></radialGradient>
+          </defs>
+          <g class="fc-beams">
+            <path class="fc-b1" d="M60 44 L1500 -120 L1500 210 Z" fill="url(#fcBeam)"/>
+            <path class="fc-b2" d="M60 44 L-1380 -120 L-1380 210 Z" fill="url(#fcBeam)" transform="translate(120 0) scale(-1 1)"/>
+          </g>
+          <circle class="fc-halo" cx="60" cy="44" r="26" fill="url(#fcLamp)"/>
+          <path d="M60 14v-6" stroke="#fff1dc" stroke-width="2" stroke-linecap="round"/>
+          <path d="M44 30 Q60 12 76 30Z" fill="#17100b" stroke="#fff1dc" stroke-width="2" stroke-linejoin="round"/>
+          <rect x="46" y="30" width="28" height="26" rx="2" fill="none" stroke="#fff1dc" stroke-width="2"/>
+          <path d="M53 30v26M67 30v26" stroke="#fff1dc" stroke-width="1.2" stroke-opacity=".6"/>
+          <circle class="fc-bulb" cx="60" cy="43" r="6" fill="#fff1dc"/>
+          <path d="M38 60h44M40 56h40" stroke="#fff1dc" stroke-width="2" stroke-linecap="round"/>
+          <path d="M45 64h30l9 112H36z" fill="#1d140d" stroke="#fff1dc" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M44.2 86h31.6l1.9 22H42.3zM41.3 128h37.4l1.9 22H39.4z" fill="#d08a52"/>
+          <path d="M56 158h8v18h-8z" fill="none" stroke="#fff1dc" stroke-width="1.6"/>
+          <path d="M22 176h76" stroke="#fff1dc" stroke-width="2" stroke-linecap="round"/>
+          <path d="M14 186 Q34 178 50 186 T86 186 T112 184" fill="none" stroke="#bba893" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".7"/>
+        </svg>
+        <span class="fc-txt">
+          <span class="fc-kick" data-i18n="pr.faroKick">También en prensa</span>
+          <span class="fc-h"><span data-i18n="pr.faroPre">También nos ha visitado</span> <b>El Faro de Ceuta</b><span data-i18n="pr.faroPost">.</span></span>
+          <span class="fc-sub" data-i18n="pr.faroSub">Pulsa el faro para ver su reportaje en YouTube.</span>
+          <span class="fc-go"><span data-i18n="pr.faroCta">Ver el reportaje</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </span>
+      </a>
     </div>
   </section>
 
-  <!-- 06 Reviews -->
+  <!-- 05 Reviews -->
   <section class="s reviews io" id="opiniones">
     <div class="gap-mq rev" aria-hidden="true"><div class="gap-row" id="mqReviews"></div></div>
     <div class="wrap">
-      <p class="eyebrow reveal" style="justify-content:center"><b>06</b><span data-i18n="rv.eyebrow">Opiniones</span></p>
+      <p class="eyebrow reveal" style="justify-content:center"><b>05</b><span data-i18n="rv.eyebrow">Opiniones</span></p>
       <svg class="strip" viewBox="0 0 320 2" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1H319" pathLength="1"/></svg>
       <div class="stars" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
@@ -294,11 +290,11 @@
     </div>
   </section>
 
-  <!-- 07 Visit (the one call to action) -->
+  <!-- 06 Visit (the one call to action) -->
   <section class="s" id="visita">
     <div class="gap-mq" aria-hidden="true"><div class="gap-row" id="mqVisit"></div></div>
     <div class="wrap io">
-      <p class="eyebrow reveal"><b>07</b><span data-i18n="vi.eyebrow">Visítanos</span></p>
+      <p class="eyebrow reveal"><b>06</b><span data-i18n="vi.eyebrow">Visítanos</span></p>
       <svg class="strip" viewBox="0 0 320 2" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1H319" pathLength="1"/></svg>
       <h2 class="t reveal" data-i18n="vi.title">Ven a vernos a la calle Solís.</h2>
       <div class="visit" style="margin-top:44px">
@@ -375,6 +371,21 @@
   <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
   <span class="wa-tip" data-i18n="wa.tip">Escríbenos por WhatsApp</span>
 </a>
+
+<!-- product photo, enlarged -->
+<div class="zoom" id="zoom" role="dialog" aria-modal="true" aria-labelledby="zoomName" hidden>
+  <div class="zoom-box">
+    <button type="button" class="lb-close" id="zoomClose" aria-label="Cerrar" data-i18n-aria="lb.close"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="zoom-ph" id="zoomPh"></div>
+    <div class="zoom-tx">
+      <span class="zoom-br" id="zoomBrand"></span>
+      <h3 class="zoom-nm" id="zoomName"></h3>
+      <span class="zoom-pr" id="zoomPrice"></span>
+      <span class="zoom-note" id="zoomNote"></span>
+      <a class="btn btn-primary" id="zoomAsk" href="https://wa.me/34956512987" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg><span data-i18n="cat.askWa">Pregúntanos por WhatsApp</span></a>
+    </div>
+  </div>
+</div>
 
 <!-- video lightbox -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vídeo" data-i18n-aria="lb.label" hidden>
