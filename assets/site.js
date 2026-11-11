@@ -605,7 +605,7 @@ const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').repla
 function ensureCatalog() {
   if (CAT) return Promise.resolve();
   if (!catPromise) {
-    catPromise = fetch('assets/data/tienda.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    catPromise = fetch('assets/data/tienda.json?v=20261111').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(d => {
         BR = d.b.map(([n, logo], i) => ({ i, n, logo, count: 0, secs: new Map() }));
         IMG = d.g;
