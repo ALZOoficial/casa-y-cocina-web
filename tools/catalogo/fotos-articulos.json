@@ -984,16 +984,6 @@
 0,
 "Cacerola 28 cm SmartCLICK, 6,5 L"
 ],
-"Cacerola 26 signature|1|49": [
-"tescoma-121a44af0e.webp",
-0,
-"Cacerola 28 cm SmartCLICK, 6,5 L"
-],
-"Cacerola 30 signature|1|62": [
-"tescoma-121a44af0e.webp",
-0,
-"Cacerola 28 cm SmartCLICK, 6,5 L"
-],
 "Cacerola a natural|1|28": [
 "tescoma-121a44af0e.webp",
 0,
@@ -1019,7 +1009,7 @@
 0,
 "Cacerola alta Fusiontec Aromatic de 24 cm negra WMF"
 ],
-"Cacerola alta|1|23": [
+"Cacerola alta|1|23.0": [
 "wmf-fa78640518.webp",
 0,
 "Cacerola alta Fusiontec Aromatic de 24 cm negra WMF"
@@ -1124,7 +1114,7 @@
 0,
 "Cafetera Lumero Espresso WMF"
 ],
-"Cafetera|2|8": [
+"Cafetera|2|8.0": [
 "wmf-3dc90c16a7.webp",
 0,
 "Cafetera Lumero Espresso WMF"
@@ -1693,11 +1683,6 @@
 "jj-a410232eb0.webp",
 1,
 "Titan 30L Stainless-steel Trash Compactor"
-],
-"Cubo champan|11|64.2": [
-"tescoma-e4140da696.webp",
-0,
-"Cubo para vino y champán Uno Vino"
 ],
 "Cubo champan|9|92": [
 "tescoma-e4140da696.webp",
@@ -2343,11 +2328,6 @@
 "tescoma-82ad481919.webp",
 0,
 "Cuchillo verduras antiadherente 14 cm Presto"
-],
-"Cuchillos cocina|4|69": [
-"tescoma-f58006c136.webp",
-0,
-"Cuchillo cocina 8 cm Presto"
 ],
 "Cuchillos merienda|4|9": [
 "wmf-f69dedf521.webp",
@@ -3899,11 +3879,6 @@
 0,
 "Olla alta de 22 cm Fusiontec Aromatic negro WMF"
 ],
-"Olla baja verde|1|59": [
-"wmf-628a57274b.webp",
-0,
-"Olla baja de 16 cm con tapa de WMF"
-],
 "Olla baja|1|115": [
 "wmf-628a57274b.webp",
 0,
@@ -3919,7 +3894,7 @@
 0,
 "Olla para pasta de 24 cm WMF"
 ],
-"Olla presion rapida|1|42": [
+"Olla presion rapida|1|42.0": [
 "tescoma-3714006fa3.webp",
 0,
 "Olla a presión 7,5 L SmartCLICK"
@@ -3994,12 +3969,7 @@
 0,
 "Paellera GrandCHEF+ 34 cm"
 ],
-"Paellera supra|0|29": [
-"tescoma-28ef18ae88.webp",
-0,
-"Paellera GrandCHEF+ 34 cm"
-],
-"Paellera terra|0|40": [
+"Paellera supra|0|29.0": [
 "tescoma-28ef18ae88.webp",
 0,
 "Paellera GrandCHEF+ 34 cm"
@@ -4649,7 +4619,7 @@
 0,
 "Plato mini 16 x 14 cm Gustito"
 ],
-"Plato|7|3": [
+"Plato|7|3.0": [
 "tescoma-c2e4bf23ac.webp",
 0,
 "Plato mini 16 x 14 cm Gustito"
@@ -5559,11 +5529,6 @@
 0,
 "Juego de cuchillos de 3 piezas Grand Gourmet WMF"
 ],
-"Set 6 platos arcoiris|7|64": [
-"lc2-7e021fc209.webp",
-0,
-"Set de 6 Platos Llanos Arcoíris en Cerámica Gres"
-],
 "Set 9 cortapastas redondos|5|19": [
 "tescoma-875aff6b04.webp",
 0,
@@ -6269,12 +6234,12 @@
 0,
 "Tetera GrandCHEF, 2,0 L"
 ],
-"Tetera zen|2|46": [
+"Tetera zen|2|47.5": [
 "tescoma-e9b4940788.webp",
 0,
 "Tetera GrandCHEF, 2,0 L"
 ],
-"Tetera|2|11": [
+"Tetera|2|11.0": [
 "tescoma-e9b4940788.webp",
 0,
 "Tetera GrandCHEF, 2,0 L"

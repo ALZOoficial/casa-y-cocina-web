@@ -9,20 +9,20 @@ const RM = matchMedia('(prefers-reduced-motion: reduce)');
 
 /* ---------------- Data ---------------- */
 const SECTIONS = [
-  ['sartenes', 'Sartenes, woks y planchas', 'Frying pans, woks & griddles', 271],
-  ['ollas', 'Ollas y cacerolas', 'Pots & casseroles', 392],
-  ['cafe', 'Café y té', 'Coffee & tea', 326],
-  ['electro', 'Pequeño electrodoméstico', 'Small appliances', 409],
-  ['cuchillos', 'Cuchillos', 'Knives', 246],
-  ['utensilios', 'Utensilios de cocina', 'Kitchen tools', 2441],
+  ['sartenes', 'Sartenes, woks y planchas', 'Frying pans, woks & griddles', 262],
+  ['ollas', 'Ollas y cacerolas', 'Pots & casseroles', 385],
+  ['cafe', 'Café y té', 'Coffee & tea', 276],
+  ['electro', 'Pequeño electrodoméstico', 'Small appliances', 396],
+  ['cuchillos', 'Cuchillos', 'Knives', 241],
+  ['utensilios', 'Utensilios de cocina', 'Kitchen tools', 2337],
   ['reposteria', 'Repostería y horno', 'Baking & oven', 465],
-  ['vajilla', 'Vajilla y mesa', 'Tableware', 789],
-  ['cuberteria', 'Cubertería', 'Cutlery', 208],
-  ['cristaleria', 'Cristalería y vino', 'Glassware & wine', 195],
-  ['termos', 'Termos y botellas', 'Flasks & bottles', 170],
-  ['hogar', 'Planchado y hogar', 'Ironing & home', 375],
-  ['cuidado', 'Cuidado personal', 'Personal care', 691],
-  ['infantil', 'Infantil', 'Kids', 165]
+  ['vajilla', 'Vajilla y mesa', 'Tableware', 750],
+  ['cuberteria', 'Cubertería', 'Cutlery', 203],
+  ['cristaleria', 'Cristalería y vino', 'Glassware & wine', 191],
+  ['termos', 'Termos y botellas', 'Flasks & bottles', 157],
+  ['hogar', 'Planchado y hogar', 'Ironing & home', 306],
+  ['cuidado', 'Cuidado personal', 'Personal care', 682],
+  ['infantil', 'Infantil', 'Kids', 149]
 ];
 const OTHER = ['Otros', 'Other'];
 // minutes from midnight; index 0 = Sunday
@@ -605,7 +605,7 @@ const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').repla
 function ensureCatalog() {
   if (CAT) return Promise.resolve();
   if (!catPromise) {
-    catPromise = fetch('assets/data/tienda.json?v=20261111c').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    catPromise = fetch('assets/data/tienda.json?v=20261121a').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(d => {
         BR = d.b.map(([n, logo], i) => ({ i, n, logo, count: 0, secs: new Map() }));
         IMG = d.g;
